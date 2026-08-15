@@ -4,6 +4,7 @@ body {
     font-optical-sizing: auto;
 }
 
+/* NAV */
 nav {
     background-color: #FEF8ED;
     display: flex;
@@ -11,40 +12,30 @@ nav {
     align-items: center;
     padding: 25px 20px;
 }
-/* float */
 #logo {
     display: flex;
     align-items: center;
 }
-
 #logo div {
     display: flex;
     flex-direction: column;
 }
-
 #logo img {
     width: 70px;
 }
-
 #logo div span:first-child {
     font-size: 20px;
     font-weight: 900;
     color: #161F1A;
 }
-
 #logo div span:last-child {
     color: #082612;
     font-weight: 600;
 }
 
 #menu {
-    /* border: 1px solid red; */
     display: flex;
     a {
-        /* border: 1px solid peru; */
-        /* background-color: peru; */
-        /* margin-right: 30px; */
-        /* display: inline-block; */
         text-decoration: none;
         padding: 10px 5px;
         color: #161F1A;
@@ -59,3 +50,99 @@ nav {
         margin-right: 30px;
     }
 }
+.menu-icon {
+    border: 1px solid #161F1A;
+    border-radius: 5px;
+    padding: 9px 9px 5px 9px;
+    display: none;
+    i {
+        font-size: 20px;
+    }
+}
+
+
+/* HEADER */
+header {
+    /* border: 7px solid peru; */
+    position: relative;
+    img {
+        width: 100%;
+        display: block;
+    }
+    div {
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        transform: translateY(-50%);
+        width: 500px;
+        h2 {
+            color:#161F1A;
+            font-size: 55px;
+            font-weight: 900;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 300;
+        }
+        a {
+            background-color: #3E6423;
+            color: #ffffff;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+    }
+}
+/* SECTION */
+section {
+    background-color: #EAEEE0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    p, h1 {
+        margin: 0;
+        text-align: center;
+    }
+    p:first-child {
+        color: #E85110;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    h1 {
+        color: #161F1A;
+        margin-top: 10px;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+    p:last-child {
+        font-size: 18px;
+    }
+}
+
+/* RESPONSIVE - DESKTOP FIRST */
+@media only screen and (max-width: 900px) {
+    nav {
+        #menu {
+            display: none;
+        }
+        .menu-icon {
+            display: block;
+        }    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
