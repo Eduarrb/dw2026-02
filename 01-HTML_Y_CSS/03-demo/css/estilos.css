@@ -130,8 +130,51 @@ section {
             display: block;
         }    
     }
+
+    header {
+        div {
+            width: 400px;
+            h2 {
+                font-size: 45px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+    section {
+        p {
+            padding: 0 20px;
+        }
+    }
 }
 
+@media only screen and (max-width: 480px) {
+    header {
+        div {
+            width: 200px;
+            h2 {
+                font-size: 25px;
+            }
+            p {
+                font-size: 12px;
+            }
+            a {
+                font-size: 12px;
+                padding: 8px 15px;
+            }
+        }
+    }
+    section {
+        p:first-child,
+        p:last-child {
+            font-size: 12px;
+        }
+        h1 {
+            font-size: 22px;
+        }
+    }
+}
 
 
 
