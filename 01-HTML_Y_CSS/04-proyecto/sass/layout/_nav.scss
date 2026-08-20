@@ -1,9 +1,37 @@
+@use '../base/variables' as v;
+
 .nav {
     &__contenedor {
+        align-items: center;
         &__logoBox {
             &--logo {
-                width: 15rem;
+                width: 25rem;
             }   
+        }
+        &__menu {
+            &--link {
+                // border: 1px solid;
+                font-size: 1.4rem;
+                font-family: v.$font-poppins;
+                text-transform: capitalize;
+                color: #616B7C;
+                font-weight: 500;
+                padding: 1rem 1.5rem;
+                &.active {
+                    position: relative;
+                    color: black;
+                    &::after {
+                        content: '';
+                        width: calc(100% - 3rem);
+                        border-bottom: .2rem solid #5659FE;
+                        display: inline-block;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
         }
     }
 }
