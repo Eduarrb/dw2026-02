@@ -1,0 +1,35 @@
+.header {
+    &__contenedor {
+        position: relative;
+        height: calc(100vh - 10.533rem);
+        &__imgFondo {
+            background-color: rgba(#5B5CFF, .1);
+            clip-path: polygon(70% 0, 100% 0%, 100% 100%, 70% 100%, 51% 50%);
+            height: 100%;
+        }
+        &__box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            // align-items: center;
+            &__info {
+                width: 35%;
+                // border: 1px solid;
+            }
+            &__imgBox {
+                width: 65%;
+                // border: 1px solid;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+}
