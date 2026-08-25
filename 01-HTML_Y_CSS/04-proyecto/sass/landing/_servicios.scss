@@ -1,0 +1,39 @@
+@use '../base/variables' as v;
+.servicios {
+    &__contenedor {
+        border: .1rem solid v.$border-line;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        padding: 4rem;
+        // flex-wrap: wrap;
+        column-gap: 5rem;
+        &__item {
+            display: flex;
+            align-items: center;
+            // border: 1px solid peru;
+            // justify-content: center;
+            // width: calc(100% / 3 - .4rem / 3);
+            i {
+                font-size: 3rem;
+                color: v.$color-primary;
+                margin-right: 2rem;
+            }
+            &__data {
+                font-family: v.$font-poppins;
+                h4 {
+                    font-size: 1.4rem;
+                    color: v.$color-primary-dark;
+                }
+                p {
+                    color: v.$color-gray;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        &--separador {
+            width: .2rem;
+            background-color: v.$border-line;
+        }
+    }
+}
