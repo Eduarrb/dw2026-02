@@ -3,6 +3,12 @@
     max-width: 120rem;
     margin-left: auto;
     margin-right: auto;
+    @media only screen and (max-width: v.$bp-extraLarge) {
+        max-width: 96rem;
+    }
+    @media only screen and (max-width: v.$bp-large) {
+        max-width: 72rem;
+    }
 }
 
 .btn {
@@ -29,6 +35,32 @@
             height: 100%;
             display: inline-block;
             background-color: v.$color-primary-dark;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            z-index: -1;
+            transition: all .3s;
+        }
+        &:hover {
+            color: white;
+            transition: all .3s;
+            &::before {
+                left: 0;
+                transition: all .3s;
+            }
+        }
+    }
+    &--secondaryBlue {
+        color: v.$color-primary;
+        position: relative;
+        overflow: hidden;
+        transition: all .3s;
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            background-color: v.$color-primary;
             position: absolute;
             top: 0;
             left: -100%;

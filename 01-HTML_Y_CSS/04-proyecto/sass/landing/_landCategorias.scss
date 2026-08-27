@@ -1,0 +1,48 @@
+@use '../base/variables' as v;
+
+.landCategorias {
+    font-family: v.$font-poppins;
+    &__contenedor {
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            h2 {
+                color: v.$color-primary-dark;
+                font-size: 2.2rem;
+                font-weight: 600;
+            }
+        }
+        &__bottom {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            &__item {
+                width: calc(20% - 12rem / 5);
+                border: .1rem solid v.$border-line;
+                border-radius: 1rem;
+                padding: 5rem 2rem;
+                @media only screen and (max-width: v.$bp-extraLarge) {
+                    width: calc(25% - 9rem / 4);
+                }
+                img {
+                    width: 100%;
+                    display: block;
+                }
+                &__data {
+                    margin-top: 4rem;
+                    h4 {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        color: v.$color-primary-dark;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                        color: v.$color-gray;
+                    }
+                }
+            }
+        }
+    }
+}
