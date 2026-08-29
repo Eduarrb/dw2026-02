@@ -1,6 +1,12 @@
 @use '../base/variables' as v;
 
 .nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0 0 3rem rgba(black, .3);
     &__contenedor {
         align-items: center;
         flex-wrap: wrap;
@@ -14,7 +20,22 @@
         }
         &__menu {
             @media only screen and (max-width: v.$bp-large) {
-                display: none;
+                position: absolute;
+                background-color: v.$color-primary-dark;
+                top: 0;
+                left: -100%;
+                width: 40%;
+                height: 100vh;
+                z-index: 1;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding-left: 4rem;
+                transition: all .3s;
+                &.active {
+                    left: 0;
+                    transition: all .3s;
+                }
             }
             &--link {
                 font-size: 1.4rem;
@@ -24,9 +45,16 @@
                 font-weight: 500;
                 padding: 1rem 1.5rem;
                 position: relative;
+                @media only screen and (max-width: v.$bp-large) {
+                    color: white;
+                    font-size: 2rem;
+                }
                 &:hover {
-                    color: black;
+                    color: v.$color-primary-dark;
                     transition: all .5s;
+                    @media only screen and (max-width: v.$bp-large) {
+                        color: v.$color-gray;
+                    }
                     &::after {
                         transition: all .5s;
                         border-bottom: .2rem solid #5659FE;
@@ -43,7 +71,10 @@
                     transform: translateX(-50%);
                 }
                 &.active {
-                    color: black;
+                    color: v.$color-primary-dark;
+                    @media only screen and (max-width: v.$bp-large) {
+                        color: v.$color-gray;
+                    }
                     &::after {
                         content: '';
                         width: calc(100% - 3rem);
@@ -86,6 +117,7 @@
         &__actions {
             display: flex;
             column-gap: 1.5rem;
+            align-items: center;
             &--link {
                 color: #616B7C;
                 font-size: 1.8rem;
@@ -104,6 +136,20 @@
                     align-items: center;
                     top: -1.4rem;
                     right: -.8rem;
+                }
+            }
+            &--menuBox {
+                border: .1rem solid v.$color-gray;
+                padding: .5rem;
+                border-radius: .5rem;
+                margin-left: 1rem;
+                display: none;
+                @media only screen and (max-width: v.$bp-large) {
+                    display: block;
+                }
+                i {
+                    color: v.$color-gray;
+                    font-size: 1.8rem;
                 }
             }
         }

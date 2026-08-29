@@ -7,13 +7,19 @@
         justify-content: center;
         padding: 4rem;
         // flex-wrap: wrap;
-        column-gap: 5rem;
+        gap: 5rem;
+        @media only screen and (max-width: v.$bp-large) {
+            flex-wrap: wrap;
+        }
         &__item {
             display: flex;
             align-items: center;
             // border: 1px solid peru;
             // justify-content: center;
             // width: calc(100% / 3 - .4rem / 3);
+            @media only screen and (max-width: v.$bp-large) {
+                width: calc(50% - 10.2rem / 2);
+            }
             i {
                 font-size: 3rem;
                 color: v.$color-primary;
@@ -34,6 +40,11 @@
         &--separador {
             width: .2rem;
             background-color: v.$border-line;
+            &.last {
+                @media only screen and (max-width: v.$bp-large) {
+                    display: none;
+                }
+            }
         }
     }
 }
