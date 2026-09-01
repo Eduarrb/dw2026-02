@@ -7,6 +7,9 @@
     @media only screen and (max-width: v.$bp-large) {
         margin-top: 11.2rem;
     }
+    @media only screen and (max-width: v.$bp-extraSmall) {
+        margin-top: 122.41px;
+    }
     &__contenedor {
         position: relative;
         height: calc(100vh - 10.533rem);
@@ -15,6 +18,9 @@
         }
         @media only screen and (max-width: v.$bp-large) {
             height: calc(100vh - 11.2rem);
+        }
+        @media only screen and (max-width: v.$bp-extraSmall) {
+            height: calc(100vh - 122.41px);
         }
         &__imgFondo {
             background-color: rgba(v.$color-primary, .1);
@@ -29,6 +35,10 @@
             left: 0;
             display: flex;
             flex-wrap: wrap;
+            @media only screen and (max-width: v.$bp-extraSmall) {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
             &__info {
                 font-family: v.$font-poppins;
                 width: 40%;
@@ -41,20 +51,48 @@
                 @media only screen and (max-width: v.$bp-medium) {
                     width: 100%;
                 }
+                @media only screen and (max-width: v.$bp-small) {
+                    text-align: center;
+                }
                 &--top {
                     color: v.$color-primary;
                     text-transform: uppercase;
                     font-size: 2rem;
                     font-weight: 600;
+                    @media only screen and (max-width: v.$bp-medium) {
+                        font-size: 1.6rem;
+                    }
+                    @media only screen and (max-width: v.$bp-small) {
+                        font-size: 1.4rem;
+                    }
                 }
                 &--titulo {
                     color: v.$color-primary-dark;
                     font-size: 5rem;
-                    line-height: 6rem;
+                    // line-height: 6rem;
+                    @media only screen and (max-width: v.$bp-medium) {
+                        font-size: 4rem;
+                        line-height: 5rem;
+                    }
+                    @media only screen and (max-width: v.$bp-small) {
+                        font-size: 3rem;
+                        line-height: 4rem;
+                    }
                 }
                 &--descri {
                     color: v.$color-gray;
                     font-size: 2rem;
+                    @media only screen and (max-width: v.$bp-medium) {
+                        font-size: 1.6rem;
+                    }
+                    @media only screen and (max-width: v.$bp-small) {
+                        font-size: 1.4rem;
+                    }
+                }
+                &__btnBox {
+                    @media only screen and (max-width: v.$bp-small) {
+                        flex-direction: column;
+                    }
                 }
             }
             &__imgBox {
@@ -73,6 +111,9 @@
                     display: block;
                     @media only screen and (max-width: v.$bp-medium) {
                         width: 50%;
+                    }
+                    @media only screen and (max-width: v.$bp-small) {
+                        width: 60%;
                     }
                 }
             }

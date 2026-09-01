@@ -10,6 +10,9 @@
     &__contenedor {
         align-items: center;
         flex-wrap: wrap;
+        @media only screen and (max-width: v.$bp-extraSmall) {
+            flex-direction: column;
+        }
         &__logoBox {
             &--logo {
                 width: 25rem;
@@ -36,6 +39,9 @@
                     left: 0;
                     transition: all .3s;
                 }
+            }
+            @media only screen and (max-width: v.$bp-extraSmall) {
+                width: 50%;
             }
             &--link {
                 font-size: 1.4rem;
@@ -118,6 +124,9 @@
             display: flex;
             column-gap: 1.5rem;
             align-items: center;
+            @media only screen and (max-width: v.$bp-extraSmall) {
+                margin-bottom: 1rem;
+            }
             &--link {
                 color: #616B7C;
                 font-size: 1.8rem;

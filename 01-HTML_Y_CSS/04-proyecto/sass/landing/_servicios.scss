@@ -11,6 +11,9 @@
         @media only screen and (max-width: v.$bp-large) {
             flex-wrap: wrap;
         }
+        @media only screen and (max-width: v.$bp-small) {
+            gap: 2rem;
+        }
         &__item {
             display: flex;
             align-items: center;
@@ -19,6 +22,9 @@
             // width: calc(100% / 3 - .4rem / 3);
             @media only screen and (max-width: v.$bp-large) {
                 width: calc(50% - 10.2rem / 2);
+            }
+            @media only screen and (max-width: v.$bp-small) {
+                width: 100%;
             }
             i {
                 font-size: 3rem;
@@ -42,6 +48,11 @@
             background-color: v.$border-line;
             &.last {
                 @media only screen and (max-width: v.$bp-large) {
+                    display: none;
+                }
+            }
+            &.first {
+                @media only screen and (max-width: v.$bp-small) {
                     display: none;
                 }
             }
