@@ -55,3 +55,12 @@ console.log(nombre[3])
 let parrafo = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa amet ab, repellendus sequi qui ipsam incidunt ad aliquid mollitia quas veritatis sapiente eos obcaecati temporibus nesciunt commodi quo alias atque?'
 
 console.log(parrafo[parrafo.length - 1]);
+
+const dni = '123456789'
+const num = 123456789;
+
+console.log(dni);
+console.log(num);
+
+
+

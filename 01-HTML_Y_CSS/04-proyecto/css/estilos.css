@@ -122,6 +122,29 @@ ul, ol {
   transition: all 0.3s;
 }
 
+.sectionTop {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+@media only screen and (max-width: 36em) {
+  .sectionTop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.sectionTop h2 {
+  color: #101C2A;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+@media only screen and (max-width: 36em) {
+  .sectionTop h2 {
+    padding-left: 1.5rem;
+  }
+}
+
 .d-flex {
   display: flex;
 }
@@ -864,27 +887,6 @@ ul, ol {
 
 .landCategorias {
   font-family: "Poppins", sans-serif;
-}
-.landCategorias__contenedor__top {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-}
-@media only screen and (max-width: 36em) {
-  .landCategorias__contenedor__top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-.landCategorias__contenedor__top h2 {
-  color: #101C2A;
-  font-size: 2.2rem;
-  font-weight: 600;
-}
-@media only screen and (max-width: 36em) {
-  .landCategorias__contenedor__top h2 {
-    padding-left: 1.5rem;
-  }
 }
 .landCategorias__contenedor__bottom {
   display: flex;
