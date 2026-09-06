@@ -191,6 +191,24 @@ ul, ol {
   }
 }
 
+.form .form--group {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.form .form--group input {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  outline: 0;
+}
+.form .form--group input[type=submit] {
+  cursor: pointer;
+}
+.form .form--group input[type=submit]:hover {
+  background-color: #5B5CFF;
+}
+
 .d-flex {
   display: flex;
 }
@@ -707,6 +725,59 @@ ul, ol {
   font-size: 1.8rem;
 }
 
+.footer {
+  background-color: #101C2A;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.footer__contenedor__top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.footer__contenedor__top__col {
+  width: calc(25% - 3.75rem);
+}
+@media only screen and (max-width: 62em) {
+  .footer__contenedor__top__col {
+    width: calc(50% - 2.5rem);
+  }
+}
+@media only screen and (max-width: 36em) {
+  .footer__contenedor__top__col {
+    width: 100%;
+  }
+}
+.footer__contenedor__top__col img {
+  width: 100%;
+}
+.footer__contenedor__top__col p {
+  font-size: 1.4rem;
+  line-height: 2.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer__contenedor__top__col__socialBox {
+  display: flex;
+  gap: 2rem;
+}
+.footer__contenedor__top__col__socialBox a {
+  display: inline-block;
+  font-size: 2rem;
+  color: white;
+}
+.footer__contenedor__top__col--titulo {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.footer__contenedor__top__col--linkBox {
+  margin-bottom: 2rem;
+}
+.footer__contenedor__top__col--linkBox a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.4rem;
+}
+
 .header {
   margin-top: 10.533rem;
 }
@@ -997,6 +1068,16 @@ ul, ol {
   display: flex;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
+}
+@media only screen and (max-width: 62em) {
+  .landingProductos__contenedor__bottom__item {
+    width: calc(50% - 1.5rem);
+  }
+}
+@media only screen and (max-width: 36em) {
+  .landingProductos__contenedor__bottom__item {
+    width: 100%;
+  }
 }
 .landingProductos__contenedor__bottom__item__favorito {
   align-self: flex-end;

@@ -153,6 +153,26 @@
     }
 }
 
+.form {
+    .form--group {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        input {
+            width: 100%;
+            border: none;
+            padding: 1rem;
+            border-radius: .5rem;
+            outline: 0;
+        }
+        input[type=submit] {
+            cursor: pointer;
+            &:hover {
+                background-color: v.$color-primary;
+            }
+        }
+    }
+}
+
 .d-flex {
     display: flex;
 }
