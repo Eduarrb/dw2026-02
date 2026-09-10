@@ -1,0 +1,23 @@
+{
+    "eduardo": {
+        "nombre": "Eduardo",
+        "apellido": "Arroyo",
+        "edad": 30,
+        "casado": true,
+        "skills": ["php", "js", "react"]
+    },
+    "sofia": {
+        "nombre": "Sofia",
+        "apellido": "Salas",
+        "edad": 23,
+        "casado": false,
+        "skills": ["html", "css"]
+    },
+    "carlitos": {
+        "nombre": "Carlos",
+        "apellido": "Peralta",
+        "edad": 45,
+        "casado": true,
+        "skills": ["php", "js", "react", "devops", "hacking"]
+    }
+}
