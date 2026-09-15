@@ -46,6 +46,19 @@ INSERT INTO personas (nombres, apellidos, dni, fechaNac) VALUES ("Carlos", "Lope
 
 -- 💥💥 NO LO HAGAS SI TIENES DATOS NI EN PRODUCCION, ES MAS NUNCA LO HAGAN
 
-DELETE FROM personas
+DELETE FROM personas WHERE id = 1
 
 TRUNCATE TABLE personas
+
+SELECT nombres, apellidos FROM personas
+
+SELECT CONCAT(nombres, apellidos) FROM personas
+
+SELECT CONCAT(nombres, ' ', apellidos) FROM personas
+
+SELECT CONCAT(nombres, ' ', apellidos) AS usuarioNuevo FROM personas
+
+SELECT CONCAT(nombres, ' ', apellidos) AS usuario FROM personas
+
+DROP DATABASE prueba -- 💥💥💥
+
