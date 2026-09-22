@@ -23,7 +23,11 @@
         <div class="row">
             <?php while($fila = mysqli_fetch_assoc($res)): ?>
                 <article class="col-md-3 mb-4">
-                    <img src="https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Interestellar" style="width:100%">
+                    <img 
+                        src="<?php echo $fila['peli_img']; ?>" 
+                        alt="<?php echo $fila['peli_nombre']; ?>" 
+                        style="width:100%"
+                    >
                     <h4>
                         <?php echo $fila['peli_nombre']; ?>
                     </h4>
@@ -37,8 +41,8 @@
                         <strong>Rating: </strong> <?php echo $fila['peli_restricciones']; ?>
                     </div>
                     <div>
-                        <a href="#" class="btn btn-warning">editar</a>
-                        <a href="#" class="btn btn-danger">borrar</a>
+                        <a href="edit.php?id=<?php echo $fila['peli_id']; ?>" class="btn btn-warning">editar</a>
+                        <a href="delete.php?id=<?php echo $fila['peli_id']; ?>" class="btn btn-danger">borrar</a>
                     </div>
                 </article>
             <?php endwhile; ?>

@@ -53,3 +53,6 @@ ALTER TABLE peliculas
 
 DELETE FROM directores WHERE dire_id = 2
 
+ALTER TABLE peliculas ADD COLUMN peli_img VARCHAR(100)
+
+ALTER TABLE peliculas MODIFY peli_img TEXT

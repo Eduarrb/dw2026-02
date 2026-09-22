@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mi perfil | TechBox</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="css/estilos.css" />
+	</head>
+	<body>
+		<nav class="nav">
+			<div class="nav__contenedor contenedor d-flex justify-content-between pt-1 pb-1 pl-2 pr-2">
+				<a href="index.html" class="nav__contenedor__logoBox"><img src="img/techbox-logo-horizontal.png" alt="TechBox" class="nav__contenedor__logoBox--logo" /></a>
+				<div class="nav__contenedor__menu d-flex">
+					<a href="index.html" class="nav__contenedor__menu--link">inicio</a><a href="#" class="nav__contenedor__menu--link">productos</a><a href="#" class="nav__contenedor__menu--link">categorias</a
+					><a href="#" class="nav__contenedor__menu--link">ofertas</a><a href="contacto.html" class="nav__contenedor__menu--link">contacto</a>
+				</div>
+				<form class="nav__contenedor__form">
+					<div class="nav__contenedor__form__box"><input type="text" placeholder="Buscar Productos..." aria-label="Buscar productos" /><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
+				</form>
+				<div class="nav__contenedor__actions">
+					<a href="#" class="nav__contenedor__actions--link" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></a
+					><a href="perfil.html" class="nav__contenedor__actions--link" aria-label="Mi cuenta" aria-current="page"><i class="fa-solid fa-circle-user"></i></a
+					><a href="carrito.html" class="nav__contenedor__actions--link" aria-label="Carrito"><span class="nav__contenedor__actions--link--num">2</span><i class="fa-solid fa-cart-shopping"></i></a
+					><a href="#" class="nav__contenedor__actions--menuBox" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></a>
+				</div>
+			</div>
+		</nav>
+		<main class="perfil">
+			<div class="perfil__contenedor contenedor">
+				<nav class="perfil__contenedor__ruta" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><span>/</span><span aria-current="page">Mi cuenta</span></nav>
+				<header class="perfil__contenedor__encabezado">
+					<h1>Mi perfil</h1>
+					<p>Hola, Juan Pérez</p>
+				</header>
+				<div class="perfil__contenedor__principal">
+					<aside class="perfil__contenedor__principal__menu">
+						<div class="perfil__contenedor__principal__menu__usuario">
+							<div class="perfil__contenedor__principal__menu__usuario--avatar">JP</div>
+							<h2>Juan Pérez</h2>
+							<p>juan.perez@email.com</p>
+						</div>
+						<nav class="perfil__contenedor__principal__menu__enlaces" aria-label="Opciones de cuenta">
+							<a href="#perfil" class="active"><i class="fa-regular fa-user"></i>Mi perfil</a><a href="#pedidos"><i class="fa-solid fa-box"></i>Mis pedidos</a><a href="#direccion"><i class="fa-solid fa-location-dot"></i>Direcciones</a
+							><a href="#"><i class="fa-regular fa-heart"></i>Favoritos</a><a href="#"><i class="fa-solid fa-shield-halved"></i>Seguridad</a><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesión</a>
+						</nav>
+					</aside>
+					<div class="perfil__contenedor__principal__contenido" id="perfil">
+						<section class="perfil__contenedor__principal__contenido__tarjeta">
+							<h2 class="perfil__contenedor__principal__contenido__tarjeta--titulo">Información personal</h2>
+							<form class="perfil__contenedor__principal__contenido__tarjeta__form">
+								<div class="perfil__contenedor__principal__contenido__tarjeta__form__grupo"><label for="perfil-nombres">Nombres</label><input id="perfil-nombres" value="Juan" autocomplete="given-name" /></div>
+								<div class="perfil__contenedor__principal__contenido__tarjeta__form__grupo"><label for="perfil-apellidos">Apellidos</label><input id="perfil-apellidos" value="Pérez" autocomplete="family-name" /></div>
+								<div class="perfil__contenedor__principal__contenido__tarjeta__form__grupo"><label for="perfil-correo">Correo electrónico</label><input id="perfil-correo" type="email" value="juan.perez@email.com" autocomplete="email" /></div>
+								<div class="perfil__contenedor__principal__contenido__tarjeta__form__grupo"><label for="perfil-telefono">Teléfono</label><input id="perfil-telefono" type="tel" value="+51 912 345 678" autocomplete="tel" /></div>
+								<div class="perfil__contenedor__principal__contenido__tarjeta__form__grupo"><label for="perfil-documento">Documento de identidad</label><input id="perfil-documento" value="12345678" /></div>
+								<div class="perfil__contenedor__principal__contenido__tarjeta__form__grupo"><label for="perfil-nacimiento">Fecha de nacimiento</label><input id="perfil-nacimiento" type="date" value="1990-06-15" /></div>
+								<button type="submit" class="btn btn--primary perfil__contenedor__principal__contenido__tarjeta__form--guardar">Guardar cambios</button>
+								<p class="perfil__contenedor__principal__contenido__tarjeta__form--estado" role="status" aria-live="polite"></p>
+							</form>
+						</section>
+						<section class="perfil__contenedor__principal__contenido__tarjeta" id="direccion">
+							<h2 class="perfil__contenedor__principal__contenido__tarjeta--titulo">Dirección principal</h2>
+							<div class="perfil__contenedor__principal__contenido__tarjeta__direccion">
+								<div class="perfil__contenedor__principal__contenido__tarjeta__direccion--icono"><i class="fa-solid fa-location-dot"></i></div>
+								<div class="perfil__contenedor__principal__contenido__tarjeta__direccion__datos">
+									<strong>Av. Larco 1234, Dpto. 502</strong><br />Miraflores, Lima, Lima<br />Perú<br /><strong>Código postal:</strong> 15074<br /><strong>Teléfono:</strong> +51 912 345 678
+								</div>
+								<button type="button" class="perfil__contenedor__principal__contenido__tarjeta__direccion--editar" data-editar-direccion>Editar dirección</button>
+							</div>
+							<form class="perfil__contenedor__principal__contenido__tarjeta__direccion__edicion" data-direccion hidden>
+								<label for="direccion-texto">Dirección</label><input id="direccion-texto" value="Av. Larco 1234, Dpto. 502" /><button type="button" class="btn btn--primary">Guardar dirección</button>
+							</form>
+						</section>
+					</div>
+				</div>
+				<section class="perfil__pedidos" id="pedidos">
+					<h2 class="perfil__pedidos--titulo">Pedidos recientes</h2>
+					<div class="perfil__pedidos__tabla">
+						<table>
+							<thead>
+								<tr>
+									<th>N.º de pedido</th>
+									<th>Fecha</th>
+									<th>Productos</th>
+									<th>Estado</th>
+									<th>Total</th>
+									<th>Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="#">#TBX-000123</a></td>
+									<td>12/05/2024</td>
+									<td>
+										<div class="perfil__pedidos__tabla__productos"><img src="img/product-laptop-01.png" alt="Laptop" /><img src="img/product-monitor-01.png" alt="Monitor" /><span>+1</span></div>
+									</td>
+									<td>
+										<span class="perfil__pedidos__tabla__estado"><i class="fa-solid fa-circle-check"></i> Entregado</span>
+									</td>
+									<td><strong>S/ 3,599.00</strong></td>
+									<td>
+										<a href="#" aria-label="Ver pedido TBX-000123"><i class="fa-solid fa-angle-right"></i></a>
+									</td>
+								</tr>
+								<tr>
+									<td><a href="#">#TBX-000098</a></td>
+									<td>28/04/2024</td>
+									<td>
+										<div class="perfil__pedidos__tabla__productos"><img src="img/product-keyboard-01.png" alt="Teclado" /><img src="img/home-category-mouse.png" alt="Mouse" /><span>+1</span></div>
+									</td>
+									<td>
+										<span class="perfil__pedidos__tabla__estado"><i class="fa-solid fa-circle-check"></i> Entregado</span>
+									</td>
+									<td><strong>S/ 1,249.00</strong></td>
+									<td>
+										<a href="#" aria-label="Ver pedido TBX-000098"><i class="fa-solid fa-angle-right"></i></a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<a href="#" class="perfil__pedidos--ver">Ver todos mis pedidos</a>
+				</section>
+				<section class="perfil__beneficios" aria-label="Beneficios TechBox">
+					<article class="perfil__beneficios__item">
+						<i class="fa-solid fa-truck"></i>
+						<div>
+							<h2>Envíos rápidos</h2>
+							<p>Recibe tus productos en<br />24 a 48 horas.</p>
+						</div>
+					</article>
+					<article class="perfil__beneficios__item">
+						<i class="fa-solid fa-shield-halved"></i>
+						<div>
+							<h2>Compra segura</h2>
+							<p>Tus datos y pagos están<br />protegidos.</p>
+						</div>
+					</article>
+					<article class="perfil__beneficios__item">
+						<i class="fa-solid fa-headset"></i>
+						<div>
+							<h2>Soporte especializado</h2>
+							<p>Estamos listos para<br />ayudarte.</p>
+						</div>
+					</article>
+				</section>
+			</div>
+		</main>
+		<footer class="footer pt-5 pb-5">
+			<div class="footer__contenedor contenedor">
+				<div class="footer__contenedor__top">
+					<div class="footer__contenedor__top__col">
+						<img src="img/techbox-logo-white.png" alt="Logo" />
+						<p class="mt-2 mb-2">Tecnología premiun para trabajar, crear y jugar sin limites. Calidad, confianza y rendimiento en cada producto.</p>
+						<div class="footer__contenedor__top__col__socialBox">
+							<a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a><a href="#"><i class="fa-brands fa-tiktok"></i></a>
+						</div>
+					</div>
+					<div class="footer__contenedor__top__col">
+						<h3 class="footer__contenedor__top__col--titulo">Enlaces</h3>
+						<div class="footer__contenedor__top__col--linkBox"><a href="index.html">Inicio</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Productos</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Categorias</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Ofertas</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="contacto.html">Contacto</a></div>
+					</div>
+					<div class="footer__contenedor__top__col">
+						<h3 class="footer__contenedor__top__col--titulo">Información</h3>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Acerca de nosotros</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Envios y entregas</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Cambios y devoluciones</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Terminos y condiciones</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Política de privacidad</a></div>
+					</div>
+					<div class="footer__contenedor__top__col">
+						<h3 class="footer__contenedor__top__col--titulo">Newsletter</h3>
+						<p>Suscribete y recibe ofertas exclusivas y novedades</p>
+						<form class="footer__contenedor__top__col__form form mt-2">
+							<div class="form--group"><input type="email" placeholder="Tu correo electrónico" /></div>
+							<div class="form--group"><input type="submit" value="suscribirme" class="btn btn--primary" /></div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="js/codigo.js"></script>
+		<script src="js/perfil.js"></script>
+	</body>
+</html>

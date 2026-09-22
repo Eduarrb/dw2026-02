@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contacto | TechBox</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+			integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="css/estilos.css" />
+	</head>
+	<body>
+		<nav class="nav">
+			<div class="nav__contenedor contenedor d-flex justify-content-between pt-1 pb-1 pl-2 pr-2">
+				<a href="./" class="nav__contenedor__logoBox">
+					<img src="img/techbox-logo-horizontal.png" alt="TechBox" class="nav__contenedor__logoBox--logo" />
+				</a>
+				<div class="nav__contenedor__menu d-flex">
+					<a href="#" class="nav__contenedor__menu--link">inicio</a>
+					<a href="#" class="nav__contenedor__menu--link">productos</a>
+					<a href="#" class="nav__contenedor__menu--link">categorias</a>
+					<a href="#" class="nav__contenedor__menu--link">ofertas</a>
+					<a href="contacto.html" class="nav__contenedor__menu--link active" aria-current="page">contacto</a>
+				</div>
+				<form class="nav__contenedor__form">
+					<div class="nav__contenedor__form__box">
+						<input type="text" placeholder="Buscar Productos..." />
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</div>
+				</form>
+				<div class="nav__contenedor__actions">
+					<a href="#" class="nav__contenedor__actions--link">
+						<i class="fa-regular fa-heart"></i>
+					</a>
+					<a href="#" class="nav__contenedor__actions--link">
+						<i class="fa-regular fa-user"></i>
+					</a>
+					<a href="#" class="nav__contenedor__actions--link">
+						<span class="nav__contenedor__actions--link--num">1</span>
+						<i class="fa-solid fa-cart-shopping"></i>
+					</a>
+					<a href="#" class="nav__contenedor__actions--menuBox">
+						<i class="fa-solid fa-bars"></i>
+					</a>
+				</div>
+			</div>
+		</nav>
+		<main class="contacto">
+			<div class="contacto__contenedor contenedor">
+				<nav class="contacto__contenedor__ruta" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><span>/</span><span aria-current="page">Contacto</span></nav>
+				<header class="contacto__contenedor__encabezado">
+					<h1>¿Cómo podemos ayudarte?</h1>
+					<p>Estamos aquí para resolver tus dudas y ayudarte a elegir la tecnología ideal.</p>
+				</header>
+				<section class="contacto__contenedor__canales" aria-label="Canales de contacto">
+					<article class="contacto__contenedor__canales__item">
+						<i class="fa-regular fa-envelope" aria-hidden="true"></i>
+						<h2>Escríbenos</h2>
+						<a href="mailto:info@techbox.com.pe">info@techbox.com.pe</a>
+						<p>Te responderemos a la brevedad.</p>
+					</article>
+					<article class="contacto__contenedor__canales__item">
+						<i class="fa-solid fa-phone" aria-hidden="true"></i>
+						<h2>Llámanos</h2>
+						<a href="tel:+51987654321">+51 987 654 321</a>
+						<p>Lunes a viernes, 9:00 a. m. – 6:00 p. m.</p>
+					</article>
+					<article class="contacto__contenedor__canales__item">
+						<i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+						<h2>Visítanos</h2>
+						<address>Av. Tecnología 123, Piso 4<br />San Isidro, Lima – Perú</address>
+					</article>
+				</section>
+				<div class="contacto__contenedor__contenido">
+					<section class="contacto__contenedor__contenido__mensaje" aria-labelledby="mensaje-titulo">
+						<h2 id="mensaje-titulo">Envíanos un mensaje</h2>
+						<form class="contacto__contenedor__contenido__mensaje__form">
+							<div class="contacto__contenedor__contenido__mensaje__form__fila">
+								<div class="contacto__contenedor__contenido__mensaje__form__grupo">
+									<label for="contacto-nombre">Nombre completo</label>
+									<input id="contacto-nombre" name="nombre" autocomplete="name" placeholder="Ingresa tu nombre completo" required maxlength="100" />
+								</div>
+								<div class="contacto__contenedor__contenido__mensaje__form__grupo">
+									<label for="contacto-correo">Correo electrónico</label>
+									<input id="contacto-correo" name="correo" type="email" autocomplete="email" placeholder="Ingresa tu correo electrónico" required maxlength="254" />
+								</div>
+							</div>
+							<div class="contacto__contenedor__contenido__mensaje__form__grupo">
+								<label for="contacto-asunto">Asunto</label>
+								<input id="contacto-asunto" name="asunto" placeholder="Escribe el asunto de tu consulta" required maxlength="150" />
+							</div>
+							<div class="contacto__contenedor__contenido__mensaje__form__grupo">
+								<label for="contacto-mensaje">Mensaje</label>
+								<textarea id="contacto-mensaje" name="mensaje" placeholder="Cuéntanos cómo podemos ayudarte..." rows="8" required maxlength="3000"></textarea>
+							</div>
+							<div class="contacto__contenedor__contenido__mensaje__form__privacidad">
+								<input id="contacto-privacidad" name="privacidad" type="checkbox" required />
+								<label for="contacto-privacidad">Acepto la <button type="button" class="contacto__contenedor__contenido__mensaje__form__privacidad--link" aria-expanded="false" aria-controls="contacto-politica">política de privacidad</button></label>
+							</div>
+							<p id="contacto-politica" class="contacto__contenedor__contenido__mensaje__form--aviso" hidden>
+								Formulario de demostración. Los datos ingresados no se envían ni se almacenan. El contenido de la política de privacidad se incorporará en la versión final del sitio.
+							</p>
+							<button class="btn btn--primary contacto__contenedor__contenido__mensaje__form--enviar" type="submit">Enviar mensaje</button>
+							<p class="contacto__contenedor__contenido__mensaje__form--estado" role="status" aria-live="polite"></p>
+						</form>
+					</section>
+					<aside class="contacto__contenedor__contenido__ayuda" aria-label="Ayuda y ubicación">
+						<div class="contacto__contenedor__contenido__ayuda__cabecera">
+							<i class="fa-solid fa-headset" aria-hidden="true"></i>
+							<div>
+								<h2>¿Necesitas ayuda inmediata?</h2>
+								<p>Nuestro equipo de soporte está listo para ayudarte con cualquier consulta o inconveniente.</p>
+							</div>
+						</div>
+						<div class="contacto__contenedor__contenido__ayuda__horario">
+							<i class="fa-regular fa-clock" aria-hidden="true"></i>
+							<div>
+								<h2>Horario de atención</h2>
+								<p>Lunes a viernes, 9:00 a. m. – 6:00 p. m.</p>
+							</div>
+						</div>
+						<div class="contacto__contenedor__contenido__ayuda__enlaces">
+							<h3>Enlaces rápidos</h3>
+							<a href="#contacto-envios">Envíos rápidos <i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+							<a href="#contacto-compra">Compra segura <i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+							<a href="#contacto-soporte">Soporte especializado <i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+						</div>
+						<section class="contacto__contenedor__contenido__ayuda__ubicacion" aria-labelledby="ubicacion-titulo">
+							<h3 id="ubicacion-titulo">Visítanos</h3>
+							<div class="contacto__contenedor__contenido__ayuda__ubicacion__mapa" role="img" aria-label="Mapa ilustrativo de ubicación, no representa una dirección real">
+								<span class="contacto__contenedor__contenido__ayuda__ubicacion__mapa--parque"></span>
+								<i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+							</div>
+							<address>Av. Tecnología 123, Piso 4<br />San Isidro, Lima – Perú</address>
+						</section>
+					</aside>
+				</div>
+				<section class="contacto__contenedor__beneficios" aria-label="Beneficios TechBox">
+					<article class="contacto__contenedor__beneficios__item" id="contacto-envios">
+						<i class="fa-solid fa-truck" aria-hidden="true"></i>
+						<div>
+							<h2>Envíos rápidos</h2>
+							<p>Recibe tus pedidos en tiempo récord.</p>
+						</div>
+					</article>
+					<article class="contacto__contenedor__beneficios__item" id="contacto-compra">
+						<i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+						<div>
+							<h2>Compra segura</h2>
+							<p>Protegemos tus datos y pagos.</p>
+						</div>
+					</article>
+					<article class="contacto__contenedor__beneficios__item" id="contacto-soporte">
+						<i class="fa-solid fa-headset" aria-hidden="true"></i>
+						<div>
+							<h2>Soporte especializado</h2>
+							<p>Te ayudamos antes y después de tu compra.</p>
+						</div>
+					</article>
+				</section>
+			</div>
+		</main>
+
+		<footer class="footer pt-5 pb-5">
+			<div class="footer__contenedor contenedor">
+				<div class="footer__contenedor__top">
+					<div class="footer__contenedor__top__col">
+						<img src="img/techbox-logo-white.png" alt="Logo" />
+						<p class="mt-2 mb-2">Tecnología premiun para trabajar, crear y jugar sin limites. Calidad, confianza y rendimiento en cada producto.</p>
+						<div class="footer__contenedor__top__col__socialBox">
+							<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+							<a href="#"><i class="fa-brands fa-instagram"></i></a>
+							<a href="#"><i class="fa-brands fa-youtube"></i></a>
+							<a href="#"><i class="fa-brands fa-tiktok"></i></a>
+						</div>
+					</div>
+					<div class="footer__contenedor__top__col">
+						<h3 class="footer__contenedor__top__col--titulo">Enlaces</h3>
+						<div class="footer__contenedor__top__col--linkBox">
+							<a href="#">Inicio</a>
+						</div>
+						<div class="footer__contenedor__top__col--linkBox">
+							<a href="#">Productos</a>
+						</div>
+						<div class="footer__contenedor__top__col--linkBox">
+							<a href="#">Categorias</a>
+						</div>
+						<div class="footer__contenedor__top__col--linkBox">
+							<a href="#">Ofertas</a>
+						</div>
+						<div class="footer__contenedor__top__col--linkBox">
+							<a href="#">Contacto</a>
+						</div>
+					</div>
+					<div class="footer__contenedor__top__col">
+						<h3 class="footer__contenedor__top__col--titulo">Información</h3>
+						<div class="footer__contenedor__top__col--linkBox">
+							<a href="#">Acerca de nosotros</a>
+						</div>
+						<div class="footer__contenedor__top__col--linkBox">
+							<a href="#">Envios y entregas</a>
+						</div>
+						<div class="footer__contenedor__top__col--linkBox">
+							<a href="#">Cambios y devoluciones</a>
+						</div>
+						<div class="footer__contenedor__top__col--linkBox">
+							<a href="#">Terminos y condiciones</a>
+						</div>
+						<div class="footer__contenedor__top__col--linkBox">
+							<a href="#">Política de privacidad</a>
+						</div>
+					</div>
+					<div class="footer__contenedor__top__col">
+						<h3 class="footer__contenedor__top__col--titulo">Newsletter</h3>
+						<p>Suscribete y recibe ofertas exclusivas y novedades</p>
+						<form class="footer__contenedor__top__col__form form mt-2">
+							<div class="form--group">
+								<input type="text" />
+							</div>
+							<div class="form--group">
+								<input type="submit" value="suscribirme" class="btn btn--primary" />
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="footer__contenedor__bottom"></div>
+			</div>
+		</footer>
+		<script src="js/codigo.js"></script>
+		<script src="js/contacto.js"></script>
+	</body>
+</html>

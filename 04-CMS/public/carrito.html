@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Carrito | TechBox</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="css/estilos.css" />
+	</head>
+	<body>
+		<nav class="nav">
+			<div class="nav__contenedor contenedor d-flex justify-content-between pt-1 pb-1 pl-2 pr-2">
+				<a href="index.html" class="nav__contenedor__logoBox"><img src="img/techbox-logo-horizontal.png" alt="TechBox" class="nav__contenedor__logoBox--logo" /></a>
+				<div class="nav__contenedor__menu d-flex">
+					<a href="index.html" class="nav__contenedor__menu--link">inicio</a><a href="#" class="nav__contenedor__menu--link active" aria-current="page">productos</a><a href="#" class="nav__contenedor__menu--link">categorias</a
+					><a href="#" class="nav__contenedor__menu--link">ofertas</a><a href="contacto.html" class="nav__contenedor__menu--link">contacto</a>
+				</div>
+				<form class="nav__contenedor__form">
+					<div class="nav__contenedor__form__box"><input type="text" placeholder="Buscar Productos..." aria-label="Buscar productos" /><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
+				</form>
+				<div class="nav__contenedor__actions">
+					<a href="#" class="nav__contenedor__actions--link" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></a><a href="#" class="nav__contenedor__actions--link" aria-label="Mi cuenta"><i class="fa-regular fa-user"></i></a
+					><a href="carrito.html" class="nav__contenedor__actions--link" aria-label="Carrito"><span class="nav__contenedor__actions--link--num">2</span><i class="fa-solid fa-cart-shopping"></i></a
+					><a href="#" class="nav__contenedor__actions--menuBox" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></a>
+				</div>
+			</div>
+		</nav>
+		<main class="carrito">
+			<div class="carrito__contenedor contenedor">
+				<nav class="carrito__contenedor__ruta" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><span>/</span><span aria-current="page">Carrito</span></nav>
+				<header class="carrito__contenedor__encabezado">
+					<div>
+						<h1>Mi carrito</h1>
+						<p>Revisa tus productos antes de continuar.</p>
+					</div>
+					<span>2 productos</span>
+				</header>
+				<div class="carrito__contenedor__contenido">
+					<section class="carrito__contenedor__contenido__lista" aria-label="Productos del carrito">
+						<div class="carrito__contenedor__contenido__lista--cabecera"><span>Producto</span><span>Cantidad</span><span>Precio</span><span></span></div>
+						<article class="carrito__contenedor__contenido__lista__item" data-item data-precio="7599">
+							<div class="carrito__contenedor__contenido__lista__item__producto">
+								<img src="img/product-laptop-01.png" alt="ASUS ROG Zephyrus G14" />
+								<div>
+									<h2>ASUS ROG Zephyrus G14 Ryzen 9 8945HS 32GB 1TB RTX 4070</h2>
+									<p>Laptops</p>
+								</div>
+							</div>
+							<div class="carrito__contenedor__contenido__lista__item__cantidad">
+								<button type="button" data-cantidad-cambio="-1" aria-label="Reducir cantidad">−</button><input type="number" value="1" min="1" max="99" data-cantidad aria-label="Cantidad de ASUS ROG Zephyrus G14" /><button
+									type="button"
+									data-cantidad-cambio="1"
+									aria-label="Aumentar cantidad"
+								>
+									+
+								</button>
+							</div>
+							<strong class="carrito__contenedor__contenido__lista__item__precio" data-importe>S/ 7,599.00</strong
+							><button type="button" class="carrito__contenedor__contenido__lista__item__eliminar" data-eliminar aria-label="Eliminar ASUS ROG Zephyrus G14"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button>
+						</article>
+						<article class="carrito__contenedor__contenido__lista__item" data-item data-precio="699">
+							<div class="carrito__contenedor__contenido__lista__item__producto">
+								<img src="img/product-keyboard-01.png" alt="Logitech G Pro X TKL" />
+								<div>
+									<h2>Logitech G Pro X TKL Teclado Mecánico GX Blue</h2>
+									<p>Periféricos</p>
+								</div>
+							</div>
+							<div class="carrito__contenedor__contenido__lista__item__cantidad">
+								<button type="button" data-cantidad-cambio="-1" aria-label="Reducir cantidad">−</button><input type="number" value="1" min="1" max="99" data-cantidad aria-label="Cantidad de Logitech G Pro X TKL" /><button
+									type="button"
+									data-cantidad-cambio="1"
+									aria-label="Aumentar cantidad"
+								>
+									+
+								</button>
+							</div>
+							<strong class="carrito__contenedor__contenido__lista__item__precio" data-importe>S/ 699.00</strong
+							><button type="button" class="carrito__contenedor__contenido__lista__item__eliminar" data-eliminar aria-label="Eliminar Logitech G Pro X TKL"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button>
+						</article>
+						<div class="carrito__contenedor__contenido__lista__acciones">
+							<a href="index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Continuar comprando</a><button type="button" data-vaciar>Vaciar carrito</button>
+						</div>
+						<div class="carrito__contenedor__contenido__lista__vacio" hidden>
+							<i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+							<h2>Tu carrito está vacío</h2>
+							<p>Agrega productos para comenzar tu compra.</p>
+							<a href="index.html" class="btn btn--primary">Ver productos</a>
+						</div>
+					</section>
+					<aside class="carrito__contenedor__contenido__resumen" aria-label="Resumen del pedido">
+						<h2 class="carrito__contenedor__contenido__resumen--titulo">Resumen del pedido</h2>
+						<div class="carrito__contenedor__contenido__resumen__fila"><span>Subtotal</span><strong data-subtotal>S/ 8,298.00</strong></div>
+						<div class="carrito__contenedor__contenido__resumen__fila"><span>Envío</span><strong data-envio>Gratis</strong></div>
+						<div class="carrito__contenedor__contenido__resumen__envio"><i class="fa-solid fa-truck" aria-hidden="true"></i> Envío gratis en pedidos mayores a S/ 199</div>
+						<div class="carrito__contenedor__contenido__resumen__fila carrito__contenedor__contenido__resumen__fila--total"><span>Total</span><strong data-total>S/ 8,298.00</strong></div>
+						<button type="button" class="btn btn--primary carrito__contenedor__contenido__resumen--comprar" data-comprar>Continuar con la compra</button>
+						<p class="carrito__contenedor__contenido__resumen--nota"><i class="fa-solid fa-lock" aria-hidden="true"></i> Compra 100% segura</p>
+						<p class="carrito__contenedor__contenido__resumen--estado" data-estado-carrito role="status" aria-live="polite"></p>
+					</aside>
+				</div>
+				<section class="carrito__contenedor__seguridad" aria-label="Beneficios de compra">
+					<article class="carrito__contenedor__seguridad__item">
+						<i class="fa-solid fa-truck" aria-hidden="true"></i>
+						<div>
+							<h2>Envíos rápidos</h2>
+							<p>Recibe tus pedidos en tiempo récord.</p>
+						</div>
+					</article>
+					<article class="carrito__contenedor__seguridad__item">
+						<i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+						<div>
+							<h2>Compra segura</h2>
+							<p>Protegemos tus datos y pagos.</p>
+						</div>
+					</article>
+					<article class="carrito__contenedor__seguridad__item">
+						<i class="fa-solid fa-headset" aria-hidden="true"></i>
+						<div>
+							<h2>Soporte especializado</h2>
+							<p>Te ayudamos antes y después de tu compra.</p>
+						</div>
+					</article>
+				</section>
+			</div>
+		</main>
+		<footer class="footer pt-5 pb-5">
+			<div class="footer__contenedor contenedor">
+				<div class="footer__contenedor__top">
+					<div class="footer__contenedor__top__col">
+						<img src="img/techbox-logo-white.png" alt="Logo" />
+						<p class="mt-2 mb-2">Tecnología premiun para trabajar, crear y jugar sin limites. Calidad, confianza y rendimiento en cada producto.</p>
+						<div class="footer__contenedor__top__col__socialBox">
+							<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a
+							><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+						</div>
+					</div>
+					<div class="footer__contenedor__top__col">
+						<h3 class="footer__contenedor__top__col--titulo">Enlaces</h3>
+						<div class="footer__contenedor__top__col--linkBox"><a href="index.html">Inicio</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Productos</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Categorias</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Ofertas</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="contacto.html">Contacto</a></div>
+					</div>
+					<div class="footer__contenedor__top__col">
+						<h3 class="footer__contenedor__top__col--titulo">Información</h3>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Acerca de nosotros</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Envios y entregas</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Cambios y devoluciones</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Terminos y condiciones</a></div>
+						<div class="footer__contenedor__top__col--linkBox"><a href="#">Política de privacidad</a></div>
+					</div>
+					<div class="footer__contenedor__top__col">
+						<h3 class="footer__contenedor__top__col--titulo">Newsletter</h3>
+						<p>Suscribete y recibe ofertas exclusivas y novedades</p>
+						<form class="footer__contenedor__top__col__form form mt-2">
+							<div class="form--group"><input type="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico" /></div>
+							<div class="form--group"><input type="submit" value="suscribirme" class="btn btn--primary" /></div>
+						</form>
+					</div>
+				</div>
+				<div class="footer__contenedor__bottom"></div>
+			</div>
+		</footer>
+		<script src="js/codigo.js"></script>
+		<script src="js/carrito.js"></script>
+	</body>
+</html>

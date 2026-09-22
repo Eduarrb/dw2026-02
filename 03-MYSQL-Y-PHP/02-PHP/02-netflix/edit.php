@@ -12,11 +12,17 @@
     <h1 class="text-center bg-danger text-white pt-5 pb-5">Bienvenidos a Netflix</h1>
     <section class="container">
         <div class="row py-4">
-            <a href="add.php" class="btn btn-success mr-2">Agregar pelicula</a>
+            <a href="./" class="btn btn-success mr-2">Inicio</a>
             <a href="#" class="btn btn-info">Directores</a>
         </div>
         <div class="row justify-content-center">
             <h2 class="col-md-12 text-center mb-4">Agregar nueva película</h2>
+            <?php
+                $id = $_GET['id'];
+                $query = "SELECT * FROM peliculas a INNER JOIN directores b ON a.peli_dire_id = b.dire_id WHERE peli_id = $id";
+                $res = mysqli_query($con, $query);
+                $fila = mysqli_fetch_assoc($res);
+            ?>
             <form class="col-md-6" method="post">
                 <div class="form-group">
                     <label for="peli_nombre">Nombre de la pelicula</label>
@@ -25,23 +31,24 @@
                         class="form-control" 
                         id="peli_nombre" 
                         name="peli_nombre"
+                        value="<?php echo $fila['peli_nombre']; ?>"
                     >
                 </div>
                 <div class="form-group">
                     <label for="peli_genero">Género</label>
-                    <input type="text" class="form-control" id="peli_genero" name="peli_genero">
+                    <input type="text" class="form-control" id="peli_genero" name="peli_genero" value="<?php echo $fila['peli_genero']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="peli_estreno">Fecha de estreno</label>
-                    <input type="date" class="form-control" id="peli_estreno" name="peli_estreno">
+                    <input type="date" class="form-control" id="peli_estreno" name="peli_estreno" value="<?php echo $fila['peli_estreno']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="peli_restricciones">Restricciones</label>
-                    <input type="text" class="form-control" id="peli_restricciones" name="peli_restricciones">
+                    <input type="text" class="form-control" id="peli_restricciones" name="peli_restricciones" value="<?php echo $fila['peli_restricciones']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="peli_imagen">Imagen URL</label>
-                    <input type="text" class="form-control" id="peli_imagen" name="peli_imagen">
+                    <input type="text" class="form-control" id="peli_imagen" name="peli_imagen" value="<?php echo $fila['peli_img']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="peli_dire_id">Directores</label>
@@ -51,38 +58,37 @@
                             $query = "SELECT * FROM directores";
                             $res = mysqli_query($con, $query);
                         ?>
-                        <?php while($fila = mysqli_fetch_assoc($res)): ?>
-                            <option value="<?php echo $fila['dire_id']; ?>">
-                                <?php echo $fila['dire_nombres'] . " " . $fila['dire_apellidos']; ?>
-                            </option>
+                        <?php while($filaDire = mysqli_fetch_assoc($res)): ?>
+                            <!-- filaDire = 2 == fila[peli_dire_id] = 1 -->
+                            <?php if($filaDire['dire_id'] === $fila['peli_dire_id']): ?>
+                                <option value="<?php echo $filaDire['dire_id']; ?>" selected>
+                                    <?php echo $filaDire['dire_nombres'] . " " . $filaDire['dire_apellidos']; ?>
+                                </option>
+                            <?php else: ?>
+                                <option value="<?php echo $filaDire['dire_id']; ?>">
+                                    <?php echo $filaDire['dire_nombres'] . " " . $filaDire['dire_apellidos']; ?>
+                                </option>
+                            <?php endif; ?>
                         <?php endwhile; ?>
                     </select>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success" name="guardar">Guardar</button>
+                    <button type="submit" class="btn btn-success" name="editar">Editar</button>
                 </div>
             </form>
             <?php 
-                if(isset($_POST['guardar'])) {
+                if(isset($_POST['editar'])) {
                     $peli_nombre = $_POST['peli_nombre'];
                     $peli_genero = $_POST['peli_genero'];
                     $peli_estreno = $_POST['peli_estreno'];
                     $peli_restricciones = $_POST['peli_restricciones'];
                     $peli_imagen = $_POST['peli_imagen'];
                     $peli_dire_id = $_POST['peli_dire_id'];
-
-                    $query = "INSERT INTO peliculas (peli_nombre, peli_genero, peli_estreno, peli_restricciones, peli_img, peli_dire_id) VALUES ('$peli_nombre', '$peli_genero', '$peli_estreno', '$peli_restricciones', '$peli_imagen', $peli_dire_id)";
+                    
+                    $query = "UPDATE peliculas SET peli_nombre = '$peli_nombre', peli_genero = '$peli_genero', peli_estreno = '$peli_estreno', peli_restricciones = '$peli_restricciones', peli_img = '$peli_imagen', peli_dire_id = $peli_dire_id WHERE peli_id = $id";
 
                     mysqli_query($con, $query);
-
                     header("Location: ./");
-                    // CRUD
-                    /*
-                    C -> CREATE
-                    R -> READ
-                    U -> UPDATE
-                    D -> DELETE 💥💥💥
-                    */
                 }
             ?>
         </div>
