@@ -1,2 +1,71 @@
-<!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mensajes | TechBox Admin</title><link rel="stylesheet" href="../css/estilos.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" crossorigin="anonymous"></head><body class="admin adminMensajes"><aside class="admin__sidebar"><a href="dashboard.html" class="admin__sidebar__logo"><img src="../img/techbox-logo-white.png" alt="TechBox Admin"></a><nav class="admin__sidebar__menu"><a href="dashboard.html" class="admin__sidebar__menu--link"><i class="fa-solid fa-chart-line"></i>Dashboard</a><a href="productos.html" class="admin__sidebar__menu--link"><i class="fa-solid fa-box"></i>Productos</a><a href="categorias.html" class="admin__sidebar__menu--link"><i class="fa-solid fa-layer-group"></i>Categorías</a><a href="mensajes.html" class="admin__sidebar__menu--link active"><i class="fa-solid fa-envelope"></i>Mensajes</a><a href="#" class="admin__sidebar__menu--link"><i class="fa-solid fa-cart-shopping"></i>Pedidos</a></nav><div class="admin__sidebar__inferior"><a href="../index.html" class="admin__sidebar__inferior--link"><i class="fa-solid fa-arrow-right-from-bracket"></i>Salir</a></div></aside><div class="admin__principal"><header class="admin__principal__topbar"><button type="button" class="admin__principal__topbar--menu" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button><label class="admin__principal__topbar__busqueda"><i class="fa-solid fa-magnifying-glass"></i><input placeholder="Buscar en el panel..." aria-label="Buscar en el panel"></label><div class="admin__principal__topbar__acciones--usuario"><span class="admin__principal__topbar__acciones--usuario--avatar">JP</span><strong>Juan Pérez</strong></div></header><main class="adminMensajes__contenido"><header class="adminMensajes__contenido__encabezado"><div><h1>Mensajes</h1><p>Consultas recibidas desde el formulario de contacto.</p></div><span class="adminMensajes__contenido__encabezado--contador">2 sin leer</span></header><div class="adminMensajes__contenido__filtros"><input type="search" data-busqueda-mensaje placeholder="Buscar por remitente o asunto" aria-label="Buscar mensajes"><select aria-label="Filtrar mensajes"><option>Todos los mensajes</option><option>No leídos</option><option>Leídos</option></select></div><section class="adminMensajes__contenido__lista" aria-label="Bandeja de mensajes"><a href="mensaje-detalle.html" class="adminMensajes__contenido__lista__item noLeido" data-mensaje data-marcar-leido><span class="adminMensajes__contenido__lista__item--indicador"></span><div class="adminMensajes__contenido__lista__item__remitente"><strong>María González</strong><span>maria.gonzalez@email.com</span></div><span class="adminMensajes__contenido__lista__item__asunto">Consulta sobre disponibilidad de laptop</span><time class="adminMensajes__contenido__lista__item__fecha">Hoy, 10:32 a. m.</time><span class="adminMensajes__contenido__lista__item--accion"><i class="fa-solid fa-angle-right"></i></span></a><a href="mensaje-detalle.html" class="adminMensajes__contenido__lista__item noLeido" data-mensaje data-marcar-leido><span class="adminMensajes__contenido__lista__item--indicador"></span><div class="adminMensajes__contenido__lista__item__remitente"><strong>Diego Ramírez</strong><span>diego.ramirez@email.com</span></div><span class="adminMensajes__contenido__lista__item__asunto">¿Realizan envíos a provincias?</span><time class="adminMensajes__contenido__lista__item__fecha">Ayer, 4:18 p. m.</time><span class="adminMensajes__contenido__lista__item--accion"><i class="fa-solid fa-angle-right"></i></span></a><a href="mensaje-detalle.html" class="adminMensajes__contenido__lista__item" data-mensaje data-marcar-leido><span class="adminMensajes__contenido__lista__item--indicador"></span><div class="adminMensajes__contenido__lista__item__remitente"><strong>Laura Torres</strong><span>laura.torres@email.com</span></div><span class="adminMensajes__contenido__lista__item__asunto">Información sobre cambios y devoluciones</span><time class="adminMensajes__contenido__lista__item__fecha">15/05/2024</time><span class="adminMensajes__contenido__lista__item--accion"><i class="fa-solid fa-angle-right"></i></span></a><a href="mensaje-detalle.html" class="adminMensajes__contenido__lista__item" data-mensaje data-marcar-leido><span class="adminMensajes__contenido__lista__item--indicador"></span><div class="adminMensajes__contenido__lista__item__remitente"><strong>Carlos Mendoza</strong><span>carlos.mendoza@email.com</span></div><span class="adminMensajes__contenido__lista__item__asunto">Solicitud de asesoría para componentes</span><time class="adminMensajes__contenido__lista__item__fecha">12/05/2024</time><span class="adminMensajes__contenido__lista__item--accion"><i class="fa-solid fa-angle-right"></i></span></a></section></main></div><script src="../js/admin.js"></script><script src="../js/admin-mensajes.js"></script></body></html>
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mensajes | TechBox Admin</title>
+		<link rel="stylesheet" href="../css/estilos.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" crossorigin="anonymous" />
+	</head>
+	<body class="admin adminMensajes">
+		<aside class="admin__sidebar">
+			<a href="dashboard.html" class="admin__sidebar__logo"><img src="../img/techbox-logo-white.png" alt="TechBox Admin" /></a>
+			<nav class="admin__sidebar__menu">
+				<a href="dashboard.html" class="admin__sidebar__menu--link"><i class="fa-solid fa-chart-line"></i>Dashboard</a><a href="productos.html" class="admin__sidebar__menu--link"><i class="fa-solid fa-box"></i>Productos</a
+				><a href="categorias.html" class="admin__sidebar__menu--link"><i class="fa-solid fa-layer-group"></i>Categorías</a><a href="mensajes.html" class="admin__sidebar__menu--link active"><i class="fa-solid fa-envelope"></i>Mensajes</a
+				><a href="#" class="admin__sidebar__menu--link"><i class="fa-solid fa-cart-shopping"></i>Pedidos</a>
+			</nav>
+			<div class="admin__sidebar__inferior">
+				<a href="../index.html" class="admin__sidebar__inferior--link"><i class="fa-solid fa-arrow-right-from-bracket"></i>Salir</a>
+			</div>
+		</aside>
+		<div class="admin__principal">
+			<header class="admin__principal__topbar">
+				<button type="button" class="admin__principal__topbar--menu" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button
+				><label class="admin__principal__topbar__busqueda"><i class="fa-solid fa-magnifying-glass"></i><input placeholder="Buscar en el panel..." aria-label="Buscar en el panel" /></label>
+				<div class="admin__principal__topbar__acciones--usuario"><span class="admin__principal__topbar__acciones--usuario--avatar">JP</span><strong>Juan Pérez</strong></div>
+			</header>
+			<main class="adminMensajes__contenido">
+				<header class="adminMensajes__contenido__encabezado">
+					<div>
+						<h1>Mensajes</h1>
+						<p>Consultas recibidas desde el formulario de contacto.</p>
+					</div>
+					<span class="adminMensajes__contenido__encabezado--contador">2 sin leer</span>
+				</header>
+				<div class="adminMensajes__contenido__filtros">
+					<input type="search" data-busqueda-mensaje placeholder="Buscar por remitente o asunto" aria-label="Buscar mensajes" /><select aria-label="Filtrar mensajes">
+						<option>Todos los mensajes</option>
+						<option>No leídos</option>
+						<option>Leídos</option>
+					</select>
+				</div>
+				<section class="adminMensajes__contenido__lista" aria-label="Bandeja de mensajes">
+					<a href="mensaje-detalle.html" class="adminMensajes__contenido__lista__item noLeido" data-mensaje data-marcar-leido
+						><span class="adminMensajes__contenido__lista__item--indicador"></span>
+						<div class="adminMensajes__contenido__lista__item__remitente"><strong>María González</strong><span>maria.gonzalez@email.com</span></div>
+						<span class="adminMensajes__contenido__lista__item__asunto">Consulta sobre disponibilidad de laptop</span><time class="adminMensajes__contenido__lista__item__fecha">Hoy, 10:32 a. m.</time
+						><span class="adminMensajes__contenido__lista__item--accion"><i class="fa-solid fa-angle-right"></i></span></a
+					><a href="mensaje-detalle.html" class="adminMensajes__contenido__lista__item noLeido" data-mensaje data-marcar-leido
+						><span class="adminMensajes__contenido__lista__item--indicador"></span>
+						<div class="adminMensajes__contenido__lista__item__remitente"><strong>Diego Ramírez</strong><span>diego.ramirez@email.com</span></div>
+						<span class="adminMensajes__contenido__lista__item__asunto">¿Realizan envíos a provincias?</span><time class="adminMensajes__contenido__lista__item__fecha">Ayer, 4:18 p. m.</time
+						><span class="adminMensajes__contenido__lista__item--accion"><i class="fa-solid fa-angle-right"></i></span></a
+					><a href="mensaje-detalle.html" class="adminMensajes__contenido__lista__item" data-mensaje data-marcar-leido
+						><span class="adminMensajes__contenido__lista__item--indicador"></span>
+						<div class="adminMensajes__contenido__lista__item__remitente"><strong>Laura Torres</strong><span>laura.torres@email.com</span></div>
+						<span class="adminMensajes__contenido__lista__item__asunto">Información sobre cambios y devoluciones</span><time class="adminMensajes__contenido__lista__item__fecha">15/05/2024</time
+						><span class="adminMensajes__contenido__lista__item--accion"><i class="fa-solid fa-angle-right"></i></span></a
+					><a href="mensaje-detalle.html" class="adminMensajes__contenido__lista__item" data-mensaje data-marcar-leido
+						><span class="adminMensajes__contenido__lista__item--indicador"></span>
+						<div class="adminMensajes__contenido__lista__item__remitente"><strong>Carlos Mendoza</strong><span>carlos.mendoza@email.com</span></div>
+						<span class="adminMensajes__contenido__lista__item__asunto">Solicitud de asesoría para componentes</span><time class="adminMensajes__contenido__lista__item__fecha">12/05/2024</time
+						><span class="adminMensajes__contenido__lista__item--accion"><i class="fa-solid fa-angle-right"></i></span
+					></a>
+				</section>
+			</main>
+		</div>
+		<script src="../js/admin.js"></script>
+		<script src="../js/admin-mensajes.js"></script>
+	</body>
+</html>

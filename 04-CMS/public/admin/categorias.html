@@ -1,3 +1,118 @@
-<!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Categorías | TechBox Admin</title><link rel="stylesheet" href="../css/estilos.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" crossorigin="anonymous"></head>
-<body class="admin adminCategorias"><aside class="admin__sidebar"><a href="dashboard.html" class="admin__sidebar__logo"><img src="../img/techbox-logo-white.png" alt="TechBox Admin"></a><nav class="admin__sidebar__menu"><p class="admin__sidebar__menu--titulo">Principal</p><a href="dashboard.html" class="admin__sidebar__menu--link"><i class="fa-solid fa-chart-line"></i>Dashboard</a><a href="productos.html" class="admin__sidebar__menu--link"><i class="fa-solid fa-box"></i>Productos</a><a href="categorias.html" class="admin__sidebar__menu--link active"><i class="fa-solid fa-layer-group"></i>Categorías</a><a href="#" class="admin__sidebar__menu--link"><i class="fa-solid fa-cart-shopping"></i>Pedidos</a><p class="admin__sidebar__menu--titulo">Gestión</p><a href="#" class="admin__sidebar__menu--link"><i class="fa-solid fa-users"></i>Clientes</a><a href="#" class="admin__sidebar__menu--link"><i class="fa-solid fa-tag"></i>Cupones</a><a href="#" class="admin__sidebar__menu--link"><i class="fa-solid fa-chart-pie"></i>Reportes</a></nav><div class="admin__sidebar__inferior"><a href="../index.html" class="admin__sidebar__inferior--link"><i class="fa-solid fa-arrow-right-from-bracket"></i>Salir</a></div></aside><div class="admin__principal"><header class="admin__principal__topbar"><button type="button" class="admin__principal__topbar--menu" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button><div></div><div class="admin__principal__topbar__acciones--usuario"><span class="admin__principal__topbar__acciones--usuario--avatar">JP</span><strong>Juan Pérez</strong></div></header><main class="adminCategorias__contenido"><header class="adminCategorias__contenido__encabezado"><div><h1>Categorías</h1><p>Organiza las categorías del catálogo.</p></div><a href="categoria-form.html" class="btn btn--primary"><i class="fa-solid fa-plus"></i> Nueva categoría</a></header><div class="adminCategorias__contenido__filtros"><input type="search" data-busqueda-categoria placeholder="Buscar categoría" aria-label="Buscar categoría"><select aria-label="Filtrar por estado"><option>Todos los estados</option><option>Activo</option><option>Inactivo</option></select></div><section class="adminCategorias__contenido__tabla"><table><thead><tr><th>Categoría</th><th>Slug</th><th>Productos</th><th>Estado</th><th>Acciones</th></tr></thead><tbody><tr data-categoria><td><div class="adminCategorias__contenido__tabla__categoria"><img src="../img/home-category-laptop.png" alt="Laptops"><div><strong>Laptops</strong><span>Equipos portátiles</span></div></div></td><td>laptops</td><td>24 productos</td><td><span class="adminCategorias__contenido__tabla--estado activo">Activo</span></td><td><div class="adminCategorias__contenido__tabla__acciones"><a href="categoria-detalle.html" aria-label="Ver categoría"><i class="fa-regular fa-eye"></i></a><a href="categoria-form.html" aria-label="Editar categoría"><i class="fa-regular fa-pen-to-square"></i></a><button type="button" data-eliminar-categoria aria-label="Eliminar categoría"><i class="fa-regular fa-trash-can"></i></button></div></td></tr><tr data-categoria><td><div class="adminCategorias__contenido__tabla__categoria"><img src="../img/home-category-component.png" alt="Componentes"><div><strong>Componentes</strong><span>Hardware para PC</span></div></div></td><td>componentes</td><td>38 productos</td><td><span class="adminCategorias__contenido__tabla--estado activo">Activo</span></td><td><div class="adminCategorias__contenido__tabla__acciones"><a href="categoria-detalle.html" aria-label="Ver categoría"><i class="fa-regular fa-eye"></i></a><a href="categoria-form.html" aria-label="Editar categoría"><i class="fa-regular fa-pen-to-square"></i></a><button type="button" data-eliminar-categoria aria-label="Eliminar categoría"><i class="fa-regular fa-trash-can"></i></button></div></td></tr><tr data-categoria><td><div class="adminCategorias__contenido__tabla__categoria"><img src="../img/home-category-monitor.png" alt="Monitores"><div><strong>Monitores</strong><span>Pantallas y monitores</span></div></div></td><td>monitores</td><td>16 productos</td><td><span class="adminCategorias__contenido__tabla--estado inactivo">Inactivo</span></td><td><div class="adminCategorias__contenido__tabla__acciones"><a href="categoria-detalle.html" aria-label="Ver categoría"><i class="fa-regular fa-eye"></i></a><a href="categoria-form.html" aria-label="Editar categoría"><i class="fa-regular fa-pen-to-square"></i></a><button type="button" data-eliminar-categoria aria-label="Eliminar categoría"><i class="fa-regular fa-trash-can"></i></button></div></td></tr></tbody></table><p data-estado-categorias role="status"></p></section></main></div><script src="../js/admin.js"></script><script src="../js/admin-categorias.js"></script></body></html>
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Categorías | TechBox Admin</title>
+		<link rel="stylesheet" href="../css/estilos.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" crossorigin="anonymous" />
+	</head>
+	<body class="admin adminCategorias">
+		<aside class="admin__sidebar">
+			<a href="dashboard.html" class="admin__sidebar__logo"><img src="../img/techbox-logo-white.png" alt="TechBox Admin" /></a>
+			<nav class="admin__sidebar__menu">
+				<p class="admin__sidebar__menu--titulo">Principal</p>
+				<a href="dashboard.html" class="admin__sidebar__menu--link"><i class="fa-solid fa-chart-line"></i>Dashboard</a><a href="productos.html" class="admin__sidebar__menu--link"><i class="fa-solid fa-box"></i>Productos</a
+				><a href="categorias.html" class="admin__sidebar__menu--link active"><i class="fa-solid fa-layer-group"></i>Categorías</a><a href="#" class="admin__sidebar__menu--link"><i class="fa-solid fa-cart-shopping"></i>Pedidos</a>
+				<p class="admin__sidebar__menu--titulo">Gestión</p>
+				<a href="#" class="admin__sidebar__menu--link"><i class="fa-solid fa-users"></i>Clientes</a><a href="#" class="admin__sidebar__menu--link"><i class="fa-solid fa-tag"></i>Cupones</a
+				><a href="#" class="admin__sidebar__menu--link"><i class="fa-solid fa-chart-pie"></i>Reportes</a>
+			</nav>
+			<div class="admin__sidebar__inferior">
+				<a href="../index.html" class="admin__sidebar__inferior--link"><i class="fa-solid fa-arrow-right-from-bracket"></i>Salir</a>
+			</div>
+		</aside>
+		<div class="admin__principal">
+			<header class="admin__principal__topbar">
+				<button type="button" class="admin__principal__topbar--menu" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+				<div></div>
+				<div class="admin__principal__topbar__acciones--usuario"><span class="admin__principal__topbar__acciones--usuario--avatar">JP</span><strong>Juan Pérez</strong></div>
+			</header>
+			<main class="adminCategorias__contenido">
+				<header class="adminCategorias__contenido__encabezado">
+					<div>
+						<h1>Categorías</h1>
+						<p>Organiza las categorías del catálogo.</p>
+					</div>
+					<a href="categoria-form.html" class="btn btn--primary"><i class="fa-solid fa-plus"></i> Nueva categoría</a>
+				</header>
+				<div class="adminCategorias__contenido__filtros">
+					<input type="search" data-busqueda-categoria placeholder="Buscar categoría" aria-label="Buscar categoría" /><select aria-label="Filtrar por estado">
+						<option>Todos los estados</option>
+						<option>Activo</option>
+						<option>Inactivo</option>
+					</select>
+				</div>
+				<section class="adminCategorias__contenido__tabla">
+					<table>
+						<thead>
+							<tr>
+								<th>Categoría</th>
+								<th>Slug</th>
+								<th>Productos</th>
+								<th>Estado</th>
+								<th>Acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-categoria>
+								<td>
+									<div class="adminCategorias__contenido__tabla__categoria">
+										<img src="../img/home-category-laptop.png" alt="Laptops" />
+										<div><strong>Laptops</strong><span>Equipos portátiles</span></div>
+									</div>
+								</td>
+								<td>laptops</td>
+								<td>24 productos</td>
+								<td><span class="adminCategorias__contenido__tabla--estado activo">Activo</span></td>
+								<td>
+									<div class="adminCategorias__contenido__tabla__acciones">
+										<a href="categoria-detalle.html" aria-label="Ver categoría"><i class="fa-regular fa-eye"></i></a><a href="categoria-form.html" aria-label="Editar categoría"><i class="fa-regular fa-pen-to-square"></i></a
+										><button type="button" data-eliminar-categoria aria-label="Eliminar categoría"><i class="fa-regular fa-trash-can"></i></button>
+									</div>
+								</td>
+							</tr>
+							<tr data-categoria>
+								<td>
+									<div class="adminCategorias__contenido__tabla__categoria">
+										<img src="../img/home-category-component.png" alt="Componentes" />
+										<div><strong>Componentes</strong><span>Hardware para PC</span></div>
+									</div>
+								</td>
+								<td>componentes</td>
+								<td>38 productos</td>
+								<td><span class="adminCategorias__contenido__tabla--estado activo">Activo</span></td>
+								<td>
+									<div class="adminCategorias__contenido__tabla__acciones">
+										<a href="categoria-detalle.html" aria-label="Ver categoría"><i class="fa-regular fa-eye"></i></a><a href="categoria-form.html" aria-label="Editar categoría"><i class="fa-regular fa-pen-to-square"></i></a
+										><button type="button" data-eliminar-categoria aria-label="Eliminar categoría"><i class="fa-regular fa-trash-can"></i></button>
+									</div>
+								</td>
+							</tr>
+							<tr data-categoria>
+								<td>
+									<div class="adminCategorias__contenido__tabla__categoria">
+										<img src="../img/home-category-monitor.png" alt="Monitores" />
+										<div><strong>Monitores</strong><span>Pantallas y monitores</span></div>
+									</div>
+								</td>
+								<td>monitores</td>
+								<td>16 productos</td>
+								<td><span class="adminCategorias__contenido__tabla--estado inactivo">Inactivo</span></td>
+								<td>
+									<div class="adminCategorias__contenido__tabla__acciones">
+										<a href="categoria-detalle.html" aria-label="Ver categoría"><i class="fa-regular fa-eye"></i></a><a href="categoria-form.html" aria-label="Editar categoría"><i class="fa-regular fa-pen-to-square"></i></a
+										><button type="button" data-eliminar-categoria aria-label="Eliminar categoría"><i class="fa-regular fa-trash-can"></i></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<p data-estado-categorias role="status"></p>
+				</section>
+			</main>
+		</div>
+		<script src="../js/admin.js"></script>
+		<script src="../js/admin-categorias.js"></script>
+	</body>
+</html>
