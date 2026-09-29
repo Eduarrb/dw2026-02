@@ -4,7 +4,10 @@
             <h1>Productos</h1>
             <p>Administra el catálogo de tu tienda.</p>
         </div>
-        <a href="producto-form.html" class="btn btn--primary adminProductos__contenido__encabezado--nuevo"><i class="fa-solid fa-plus"></i> Nuevo producto</a>
+        <a href="/admin/productos_add" class="btn btn--primary adminProductos__contenido__encabezado--nuevo">
+            <i class="fa-solid fa-plus"></i> 
+            Nuevo producto
+        </a>
     </header>
     <div class="adminProductos__contenido__filtros">
         <input type="search" data-busqueda placeholder="Buscar por nombre o SKU" aria-label="Buscar productos" /><select aria-label="Filtrar por categoría">

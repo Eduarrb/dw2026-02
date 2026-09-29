@@ -32,4 +32,11 @@
         }
     ?>
     
+    <?php
+        if($url === "/register") {
+            include VIEW_LAND_AUTH . DS . "register.php";
+        }
+    ?>
+
+
     <?php include VIEW_LAND_LAYOUT . DS . "footer.php"; ?>
