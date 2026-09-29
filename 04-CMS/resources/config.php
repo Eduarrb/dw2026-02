@@ -1,7 +1,11 @@
 <?php
-    defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
 
-    // defined("VIEW_LAND") ? null : define("VIEW_LAND", __DIR__ . DS . "views" . DS . "landing");
+    require __DIR__ . "/../public/vendor/autoload.php";
+
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+
+    defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
 
     defined("VIEW_LAND_LAYOUT") ? null : define("VIEW_LAND_LAYOUT", __DIR__ . DS . "views" . DS . "landing" . DS . "layout");
 
@@ -18,6 +22,11 @@
 
     defined("VIEW_ADMIN_PROD") ? null : define("VIEW_ADMIN_PROD", __DIR__ . DS . "views" . DS . "admin" . DS . "productos");
 
+    require_once 'db.php';
+
+    $db = conectarDB();
+
     $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
+    require_once 'controllers/registerController.php';
 ?>
