@@ -55,6 +55,14 @@ ul, ol {
   }
 }
 
+.color-danger {
+  color: #e74c3c;
+}
+
+.color-success {
+  color: #1abc9c;
+}
+
 .btn {
   font-size: 1.6rem;
   padding: 1rem 1.5rem;

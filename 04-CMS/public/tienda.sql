@@ -16,3 +16,6 @@ CREATE TABLE usuarios (
     CREATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     UPDATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )
+
+INSERT INTO usuarios (nombres, apellidos, correo, telefono, password) VALUES
+    ('Juancito', 'Perez', 'prueba@gmail.com', '123456789', 'password123')

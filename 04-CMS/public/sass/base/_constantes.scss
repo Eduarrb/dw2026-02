@@ -21,6 +21,13 @@
     }
 }
 
+.color-danger {
+    color: v.$color-danger;
+}
+.color-success {
+    color: v.$color-success;
+}
+
 .btn {
     font-size: 1.6rem;
     padding: 1rem 1.5rem;
