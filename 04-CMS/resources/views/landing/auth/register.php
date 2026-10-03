@@ -8,8 +8,8 @@
                     <h1 id="register-titulo">Crea tu cuenta</h1>
                     <p>Regístrate para disfrutar de todos los beneficios de TechBox</p>
                 </header>
+                <?php showSwalMensaje(); ?>
                 <?php $res = post_validarRegistro(); ?>
-                <?php //dd($res); ?>
                 <form class="register__contenedor__contenido__tarjeta__form" method="post">
                     <div class="register__contenedor__contenido__tarjeta__form__grupo">
                         <label for="register-nombres">Nombres</label>

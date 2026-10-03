@@ -46,6 +46,14 @@
     }
 
     function post_registarUsuario(String $nombres, $apellidos, $correo, $telefono, $password) {
-        $res = query("INSERT INTO usuarios (nombres, apellidos, correo, telefono, password) VALUES ('$nombres', '$apellidos', '$correo', '$telefono', '$password')");
+        $token = md5($correo);
+        $password = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
+        $res = query("INSERT INTO usuarios (nombres, apellidos, correo, telefono, password, token) VALUES ('$nombres', '$apellidos', '$correo', '$telefono', '$password', '$token')");
+        $msj = "<h3>Por favor, activa tu cuenta mediante el siguiente <a href='http://localhost:3000/activate?email=$correo&token=$token'>LINK</a></h3>";
+        sendEmail($correo, 'Activar cuenta', $msj);
+        if($res) {
+            setSwal("Registro existoso", "Por favor, revisa tu correo para activar tu cuenta", "success");
+            redirect("./register");
+        }
     }
 ?>

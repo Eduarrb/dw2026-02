@@ -55,6 +55,11 @@ ul, ol {
   }
 }
 
+.swal2-popup {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
 .color-danger {
   color: #e74c3c;
 }

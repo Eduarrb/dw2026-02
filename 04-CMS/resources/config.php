@@ -1,5 +1,7 @@
 <?php
-
+    ob_start();
+    session_start();
+    
     require __DIR__ . "/../public/vendor/autoload.php";
 
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
@@ -29,5 +31,6 @@
     $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
     require_once 'utils/util.php';
+    require_once 'utils/sendEmail.php';
     require_once 'caller.php';
 ?>
