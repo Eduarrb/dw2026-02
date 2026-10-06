@@ -36,6 +36,14 @@
         if($url === "/register") {
             include VIEW_LAND_AUTH . DS . "register.php";
         }
+
+        if($url === "/activate") {
+            include VIEW_LAND_AUTH . DS . "activate.php";
+        }
+
+        if($url === "/login") {
+            include VIEW_LAND_AUTH . DS . "login.php";
+        }
     ?>
 
 

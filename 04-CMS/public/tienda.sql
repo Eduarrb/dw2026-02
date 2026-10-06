@@ -19,3 +19,17 @@ CREATE TABLE usuarios (
 
 INSERT INTO usuarios (nombres, apellidos, correo, telefono, password) VALUES
     ('Juancito', 'Perez', 'prueba@gmail.com', '123456789', 'password123')
+
+CREATE TABLE categorias (
+    id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    slug VARCHAR(100) NOT NULL,
+    orden INT UNSIGNED NOT NULL,
+    estado TINYINT(1) NOT NULL DEFAULT 0,
+    descripcion TEXT,
+    imagen VARCHAR(100),
+    CREATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UPDATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (id) REFERENCES usuarios(id)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)

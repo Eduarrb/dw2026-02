@@ -11,6 +11,10 @@
         return mysqli_real_escape_string($db, $valor);
     }
 
+    function arrayAssoc($res) {
+        return mysqli_fetch_assoc($res);
+    }
+
     function getDato($array, $index, $key) {
         if(isset($array[$index][$key])) {
             return $array[$index][$key];

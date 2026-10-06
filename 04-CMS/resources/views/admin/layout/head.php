@@ -1,3 +1,19 @@
+<?php
+	if(!isset($_COOKIE['name'])) {
+		unset(
+			$_SESSION['id'], 
+			$_SESSION['nombres'],
+			$_SESSION['apellidos'], 
+			$_SESSION['rol']
+		);
+		redirect('../login');
+	}
+
+	if(!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
+		redirect('../login');
+	}
+
+?>
 <!doctype html>
 <html lang="es">
 	<head>
