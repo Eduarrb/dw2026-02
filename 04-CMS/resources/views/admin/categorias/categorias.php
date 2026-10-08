@@ -1,3 +1,4 @@
+
 <main class="adminCategorias__contenido">
     <header class="adminCategorias__contenido__encabezado">
         <div>

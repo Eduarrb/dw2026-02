@@ -3,7 +3,7 @@
     <section class="adminCategorias__contenido__tarjeta">
         <h1 class="adminCategorias__contenido__tarjeta--titulo">Nueva categoría</h1>
         <?php post_categoriaAdd(); ?>
-        <form class="adminCategorias__contenido__tarjeta__form" data-categoria-form method="post">
+        <form class="adminCategorias__contenido__tarjeta__form" data-categoria-form method="post" enctype="multipart/form-data">
             <div class="adminCategorias__contenido__tarjeta__form__grupo">
                 <label for="categoria-nombre">
                     Nombre

@@ -4,7 +4,7 @@
 	
 
 	<?php $url = getURL(); ?>
-
+    
 	<?php
 		function cargarClassName() {
 			global $url;
@@ -28,6 +28,8 @@
 			<?php if ($url === "/admin" || $url === "/admin/" || $url === "/admin/index.php"): ?>
 				<?php include VIEW_ADMIN_DASH . DS . "contenido.php"; ?>
 			<?php endif; ?>
+			
+			<?php showSwalMensaje(); ?>
 
 			<?php 
 				if($url === "/admin/productos") {
