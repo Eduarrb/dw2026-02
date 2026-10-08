@@ -39,7 +39,7 @@
 
             if(password_verify($password, $user_pass)) {
                 if($recordar === 'on') {
-                    setcookie('name', $user_nombres, time() + 3600);
+                    setcookie('name', $user_nombres, time() + 3600 * 24);
                 } else {
                     setcookie('name', $user_nombres, time() + 60 * 2);
                 }

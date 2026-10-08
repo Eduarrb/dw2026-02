@@ -4,18 +4,15 @@
             <img src="img/techbox-logo-horizontal.png" alt="TechBox" class="nav__contenedor__logoBox--logo">
         </a>
         <div class="nav__contenedor__menu d-flex">
-            <a href="#" class="nav__contenedor__menu--link active">inicio</a>
+            <a href="./" class="nav__contenedor__menu--link active">inicio</a>
             <a href="#" class="nav__contenedor__menu--link">productos</a>
             <a href="#" class="nav__contenedor__menu--link">categorias</a>
             <a href="#" class="nav__contenedor__menu--link">ofertas</a>
             <a href="#" class="nav__contenedor__menu--link">contacto</a>
+            <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] === 'admin'): ?>
+                <a href="/admin" class="nav__contenedor__menu--link">Admin</a>
+            <?php endif; ?>
         </div>
-        <form class="nav__contenedor__form">
-            <div class="nav__contenedor__form__box">
-                <input type="text" placeholder="Buscar Productos...">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </form>
         <div class="nav__contenedor__actions">
             <a href="#" class="nav__contenedor__actions--link">
                 <i class="fa-regular fa-heart"></i>

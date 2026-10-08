@@ -10,13 +10,13 @@
             <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
             Dashboard
         </a>
+        <a href="/admin/categorias" class="admin__sidebar__menu--link">
+            <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+            Categorías
+        </a>
         <a href="/admin/productos" class="admin__sidebar__menu--link">
             <i class="fa-solid fa-box" aria-hidden="true"></i>
             Productos
-        </a>
-        <a href="#" class="admin__sidebar__menu--link">
-            <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
-            Categorías
         </a>
         <a href="#" class="admin__sidebar__menu--link">
             <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>

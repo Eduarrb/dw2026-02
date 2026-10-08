@@ -4,6 +4,8 @@
 
     <?php include VIEW_LAND_LAYOUT . DS . "nav.php"; ?>
 
+    <?php $url = getURL(); ?>
+    
     <?php 
         if($url === "/" || $url === "/index.php") {
             include VIEW_LAND_HOME . DS . "header.php";
