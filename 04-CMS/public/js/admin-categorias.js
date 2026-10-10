@@ -17,11 +17,12 @@ if (adminCategorias) {
 	// );
 
 	adminCategorias.querySelectorAll('[data-eliminar-categoria]').forEach((boton) => {
-		boton.addEventListener('click', (e) => {
-			// console.log('funciona');
+		boton.addEventListener('click', function() {
+			const cat_id = this.getAttribute('data-id');
+			const cat_name = this.getAttribute('data-name');
 			Swal.fire({
 				title: '¿Estas seguro de desactivar la categoría?',
-				text: "Desactivaras la categoria Laptops",
+				text: "Desactivaras la categoria " + cat_name,
 				icon: 'warning',
 				showCancelButton: true,
 				confirmButtonColor: '#3085d6',
@@ -29,8 +30,7 @@ if (adminCategorias) {
 				confirmButtonText: '¡Si, desactivalo!',
 			}).then((result) => {
 				if (result.isConfirmed)
-					console.log(location.href);
-					location.href = 'http://localhost:3000/admin/categorias_delete?id=1'
+					location.href = 'http://localhost:3000/admin/categorias_deactivate?id=' + cat_id
 			});
 		});
 	});

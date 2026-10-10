@@ -53,6 +53,9 @@
 				if($url === "/admin/categoria_edit") {
 					include VIEW_ADMIN_CAT . DS . "categoria_form_edit.php";
 				}
+				if($url === "/admin/categorias_deactivate") {
+					include VIEW_ADMIN_CAT . DS . "categorias_deactivate.php";
+				}
 			?>
 
 		</div>

@@ -48,7 +48,13 @@
                                 <a href="/admin/categoria_edit?id={$row['id']}" aria-label="Editar categoría">
                                     <i class="fa-regular fa-pen-to-square"></i>
                                 </a>
-                                <button type="button" data-eliminar-categoria aria-label="Eliminar categoría">
+                                <button 
+                                    type="button" 
+                                    data-eliminar-categoria
+                                    aria-label="Eliminar categoría"
+                                    data-name={$row['nombre']}
+                                    data-id={$row['id']}
+                                >
                                     <i class="fa-regular fa-trash-can"></i>
                                 </button>
                             </div>
@@ -57,6 +63,38 @@
 DELIMITER;
             echo $categoria;
             }
+        }
+    }
+
+    function post_deactivateCategory() {
+        if(!isset($_GET['id'])) {
+            setSwal("Error", "Datos de categoria incorrectos", "error");
+            redirect('/admin/categorias');
+        } else {
+            $id = escape(trim($_GET['id']));
+            $cat_res = query("SELECT * FROM categorias WHERE id = $id");
+            $cat_fila = arrayAssoc($cat_res);
+            if($cat_fila['estado'] != 1) {
+                setSwal("Error", "La categoria ya esta desactivada", "error");
+                redirect('/admin/categorias');
+            } else {
+                $res = query("UPDATE categorias SET estado = 0 WHERE id = $id");
+                if($res) {
+                    setSwal("Ok", "Categoria desactivada correctamente", "succes");
+                    redirect("/admin/categorias");
+                }
+            }
+            
+        }
+    }
+
+    function get_adminCategoriasSelect(){
+        $res = query("SELECT id, nombre FROM categorias WHERE estado = 1");
+        while($row = arrayAssoc($res)) {
+            $categoria = <<<DELIMITER
+                <option value="{$row['id']}">{$row['nombre']}</option>
+DELIMITER;
+            echo $categoria;
         }
     }
 ?>
