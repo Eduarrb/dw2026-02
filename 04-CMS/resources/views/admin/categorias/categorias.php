@@ -26,7 +26,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr data-categoria>
+                <?php get_adminCategorias(); ?>
+                <!-- <tr data-categoria>
                     <td>
                         <div class="adminCategorias__contenido__tabla__categoria">
                             <img src="../img/home-category-laptop.png" alt="Laptops" />
@@ -76,7 +77,7 @@
                             ><button type="button" data-eliminar-categoria aria-label="Eliminar categoría"><i class="fa-regular fa-trash-can"></i></button>
                         </div>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         <p data-estado-categorias role="status"></p>

@@ -12,7 +12,7 @@
 				echo "adminProductos";
 			}
 
-			if($url === "/admin/categorias" || $url === "/admin/categorias_add" || $url === "/admin/categorias_edit") {
+			if($url === "/admin/categorias" || $url === "/admin/categorias_add" || $url === "/admin/categorias_edit" || $url === '/admin/categoria_detalle') {
 				echo "adminCategorias";
 			}
 		}
@@ -46,6 +46,12 @@
 				}
 				if($url === "/admin/categorias_add") {
 					include VIEW_ADMIN_CAT . DS . "categorias_form.php";
+				}
+				if($url === "/admin/categoria_detalle") {
+					include VIEW_ADMIN_CAT . DS . "categoria_detalle.php";
+				}
+				if($url === "/admin/categoria_edit") {
+					include VIEW_ADMIN_CAT . DS . "categoria_form_edit.php";
 				}
 			?>
 
