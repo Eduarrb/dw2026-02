@@ -3466,18 +3466,22 @@ ul, ol {
 .admin {
   min-height: 100vh;
   display: flex;
+  overflow-x: hidden;
   background: #f6f8fc;
   color: #101C2A;
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
 }
-.admin button, .admin input {
+.admin button,
+.admin input {
   font: inherit;
 }
 .admin button {
   cursor: pointer;
 }
-.admin a:focus-visible, .admin button:focus-visible, .admin input:focus-visible {
+.admin a:focus-visible,
+.admin button:focus-visible,
+.admin input:focus-visible {
   outline: 0.2rem solid #5B5CFF;
   outline-offset: 0.3rem;
 }
@@ -3544,6 +3548,7 @@ ul, ol {
 }
 .admin__principal {
   width: calc(100% - 26rem);
+  min-width: 0;
   min-height: 100vh;
   margin-left: 26rem;
 }
@@ -3785,7 +3790,8 @@ ul, ol {
   min-width: 65rem;
   border-collapse: collapse;
 }
-.admin__principal__contenido__pedidos th, .admin__principal__contenido__pedidos td {
+.admin__principal__contenido__pedidos th,
+.admin__principal__contenido__pedidos td {
   padding: 1.2rem 1rem;
   text-align: left;
   border-bottom: 0.1rem solid #E3E7EF;
@@ -3878,7 +3884,8 @@ ul, ol {
     padding-left: 0;
     border: 0;
   }
-  .admin__principal__topbar__acciones--usuario strong, .admin__principal__topbar__acciones--usuario span {
+  .admin__principal__topbar__acciones--usuario strong,
+  .admin__principal__topbar__acciones--usuario span {
     display: none;
   }
 }
@@ -3951,7 +3958,8 @@ ul, ol {
   border-radius: 0.8rem;
   background: white;
 }
-.adminProductos__contenido__filtros input, .adminProductos__contenido__filtros select {
+.adminProductos__contenido__filtros input,
+.adminProductos__contenido__filtros select {
   min-width: 18rem;
   padding: 1rem 1.2rem;
   border: 0.1rem solid #E3E7EF;
@@ -3974,7 +3982,8 @@ ul, ol {
   min-width: 90rem;
   border-collapse: collapse;
 }
-.adminProductos__contenido__tabla th, .adminProductos__contenido__tabla td {
+.adminProductos__contenido__tabla th,
+.adminProductos__contenido__tabla td {
   padding: 1.3rem 1rem;
   text-align: left;
   border-bottom: 0.1rem solid #E3E7EF;
@@ -4029,7 +4038,8 @@ ul, ol {
   display: flex;
   gap: 1rem;
 }
-.adminProductos__contenido__tabla__acciones a, .adminProductos__contenido__tabla__acciones button {
+.adminProductos__contenido__tabla__acciones a,
+.adminProductos__contenido__tabla__acciones button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4040,7 +4050,8 @@ ul, ol {
   color: #818695;
   background: white;
 }
-.adminProductos__contenido__tabla__acciones a:hover, .adminProductos__contenido__tabla__acciones button:hover {
+.adminProductos__contenido__tabla__acciones a:hover,
+.adminProductos__contenido__tabla__acciones button:hover {
   color: #5B5CFF;
   border-color: #5B5CFF;
 }
@@ -4087,16 +4098,24 @@ ul, ol {
 }
 .adminProductos__contenido__tarjeta__form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 2rem;
+  min-width: 0;
+}
+.adminProductos__contenido__tarjeta__form__grupo {
+  min-width: 0;
 }
 .adminProductos__contenido__tarjeta__form__grupo label {
   display: block;
   margin-bottom: 0.7rem;
   font-weight: 500;
 }
-.adminProductos__contenido__tarjeta__form__grupo input, .adminProductos__contenido__tarjeta__form__grupo select, .adminProductos__contenido__tarjeta__form__grupo textarea {
+.adminProductos__contenido__tarjeta__form__grupo input,
+.adminProductos__contenido__tarjeta__form__grupo select,
+.adminProductos__contenido__tarjeta__form__grupo textarea {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   padding: 1.2rem;
   border: 0.1rem solid #E3E7EF;
   border-radius: 0.6rem;
@@ -4112,6 +4131,7 @@ ul, ol {
 }
 .adminProductos__contenido__tarjeta__form__imagen {
   grid-row: span 2;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4120,6 +4140,10 @@ ul, ol {
   border: 0.1rem dashed #bec6d4;
   border-radius: 0.7rem;
   color: #818695;
+}
+.adminProductos__contenido__tarjeta__form__imagen input[type=file] {
+  max-width: 100%;
+  min-width: 0;
 }
 .adminProductos__contenido__tarjeta__form__imagen img {
   width: 18rem;
@@ -4204,7 +4228,8 @@ ul, ol {
   .adminProductos__contenido__filtros {
     flex-wrap: wrap;
   }
-  .adminProductos__contenido__filtros input, .adminProductos__contenido__filtros select {
+  .adminProductos__contenido__filtros input,
+  .adminProductos__contenido__filtros select {
     flex: 1;
     min-width: 15rem;
   }
@@ -4222,7 +4247,8 @@ ul, ol {
   .adminProductos__contenido__filtros {
     display: block;
   }
-  .adminProductos__contenido__filtros input, .adminProductos__contenido__filtros select {
+  .adminProductos__contenido__filtros input,
+  .adminProductos__contenido__filtros select {
     display: block;
     width: 100%;
     margin-bottom: 1rem;
@@ -4262,8 +4288,37 @@ ul, ol {
     grid-template-columns: 1fr 1fr;
   }
 }
+.adminProductos__contenido {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.adminProductos__contenido__encabezado {
+  min-width: 0;
+}
+
+.adminProductos__contenido__encabezado--nuevo {
+  flex-shrink: 0;
+}
+
+.adminProductos__contenido__filtros {
+  min-width: 0;
+}
+
+.adminProductos__contenido__filtros input,
+.adminProductos__contenido__filtros select {
+  min-width: 0;
+}
+
+.adminProductos__contenido__tabla {
+  width: 100%;
+  min-width: 0;
+}
+
 .adminProductos__contenido__tarjeta__form__imagenes {
   grid-column: 1/-1;
+  min-width: 0;
+  overflow: hidden;
   padding: 2rem;
   border: 0.1rem solid #E3E7EF;
   border-radius: 0.7rem;
@@ -4284,14 +4339,19 @@ ul, ol {
   font-size: 1.1rem;
 }
 .adminProductos__contenido__tarjeta__form__imagenes input[type=file] {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   margin-top: 0.8rem;
   font-size: 1.2rem;
 }
 
 .adminProductos__contenido__tarjeta__form__imagenes__principal {
   display: grid;
-  grid-template-columns: 18rem 1fr;
+  grid-template-columns: 18rem minmax(0, 1fr);
+  min-width: 0;
   align-items: center;
   gap: 2rem;
   padding-bottom: 2rem;

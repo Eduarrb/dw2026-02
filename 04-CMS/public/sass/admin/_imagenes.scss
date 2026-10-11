@@ -1,7 +1,124 @@
 @use '../base/variables' as v;
 
-.adminProductos__contenido__tarjeta__form__imagenes { grid-column: 1 / -1; padding: 2rem; border: .1rem solid v.$border-line; border-radius: .7rem; legend { padding: 0 .7rem; font-weight: 600; } p { margin: .5rem 0; color: v.$color-gray; font-size: 1.2rem; } small { display: block; margin-top: .6rem; color: v.$color-gray; font-size: 1.1rem; } input[type=file] { width: 100%; margin-top: .8rem; font-size: 1.2rem; } }
-.adminProductos__contenido__tarjeta__form__imagenes__principal { display: grid; grid-template-columns: 18rem 1fr; align-items: center; gap: 2rem; padding-bottom: 2rem; border-bottom: .1rem solid v.$border-line; }
-.adminProductos__contenido__tarjeta__form__imagenes__vista { display: flex; align-items: center; justify-content: center; width: 18rem; height: 15rem; overflow: hidden; border: .1rem dashed #bec6d4; border-radius: .7rem; color: v.$color-gray; font-size: 3rem; background: #fafbfc; img { width: 100%; height: 100%; object-fit: contain; } }
-.adminProductos__contenido__tarjeta__form__imagenes__referenciales { padding-top: 2rem; &__encabezado { display: flex; align-items: center; justify-content: space-between; gap: 1rem; input { position: absolute; width: 1px; height: 1px; opacity: 0; } .btn { display: inline-block; padding: .9rem 1.2rem; color: v.$color-primary; border: .1rem solid v.$color-primary; border-radius: .6rem; background: white; font-size: 1.2rem; } } &__galeria { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; } &__item { width: 9rem; height: 8rem; padding: .4rem; border: .1rem solid v.$border-line; border-radius: .5rem; img { width: 100%; height: 100%; object-fit: contain; } } &__vacio { display: flex; align-items: center; gap: .8rem; color: v.$color-gray; font-size: 1.2rem; } }
-@media only screen and (max-width: v.$bp-small) { .adminProductos__contenido__tarjeta__form__imagenes__principal { display: block; & > div:first-child { margin-bottom: 1.5rem; } } .adminProductos__contenido__tarjeta__form__imagenes__referenciales__encabezado { display: block; .btn { margin-top: 1rem; } } }
+.adminProductos__contenido__tarjeta__form__imagenes {
+	grid-column: 1 / -1;
+	min-width: 0;
+	overflow: hidden;
+	padding: 2rem;
+	border: 0.1rem solid v.$border-line;
+	border-radius: 0.7rem;
+	legend {
+		padding: 0 0.7rem;
+		font-weight: 600;
+	}
+	p {
+		margin: 0.5rem 0;
+		color: v.$color-gray;
+		font-size: 1.2rem;
+	}
+	small {
+		display: block;
+		margin-top: 0.6rem;
+		color: v.$color-gray;
+		font-size: 1.1rem;
+	}
+	input[type='file'] {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
+		box-sizing: border-box;
+		margin-top: 0.8rem;
+		font-size: 1.2rem;
+	}
+}
+.adminProductos__contenido__tarjeta__form__imagenes__principal {
+	display: grid;
+	grid-template-columns: 18rem minmax(0, 1fr);
+	min-width: 0;
+	align-items: center;
+	gap: 2rem;
+	padding-bottom: 2rem;
+	border-bottom: 0.1rem solid v.$border-line;
+}
+.adminProductos__contenido__tarjeta__form__imagenes__vista {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 18rem;
+	height: 15rem;
+	overflow: hidden;
+	border: 0.1rem dashed #bec6d4;
+	border-radius: 0.7rem;
+	color: v.$color-gray;
+	font-size: 3rem;
+	background: #fafbfc;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+.adminProductos__contenido__tarjeta__form__imagenes__referenciales {
+	padding-top: 2rem;
+	&__encabezado {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		input {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			opacity: 0;
+		}
+		.btn {
+			display: inline-block;
+			padding: 0.9rem 1.2rem;
+			color: v.$color-primary;
+			border: 0.1rem solid v.$color-primary;
+			border-radius: 0.6rem;
+			background: white;
+			font-size: 1.2rem;
+		}
+	}
+	&__galeria {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-top: 1.5rem;
+	}
+	&__item {
+		width: 9rem;
+		height: 8rem;
+		padding: 0.4rem;
+		border: 0.1rem solid v.$border-line;
+		border-radius: 0.5rem;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	&__vacio {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		color: v.$color-gray;
+		font-size: 1.2rem;
+	}
+}
+@media only screen and (max-width: v.$bp-small) {
+	.adminProductos__contenido__tarjeta__form__imagenes__principal {
+		display: block;
+		& > div:first-child {
+			margin-bottom: 1.5rem;
+		}
+	}
+	.adminProductos__contenido__tarjeta__form__imagenes__referenciales__encabezado {
+		display: block;
+		.btn {
+			margin-top: 1rem;
+		}
+	}
+}
