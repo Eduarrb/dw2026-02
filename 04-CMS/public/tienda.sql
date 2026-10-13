@@ -67,3 +67,5 @@ CREATE TABLE producto_galeria (
     FOREIGN KEY (producto_id) REFERENCES productos(id)
     ON DELETE CASCADE ON UPDATE CASCADE
 )
+
+SELECT a.nombre, b.nombre FROM productos a INNER JOIN categorias b ON a.categoria_id = b.id

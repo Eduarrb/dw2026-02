@@ -3,7 +3,7 @@
         echo "<pre style='font-size: 1.6rem;'>";
         var_dump($valor);
         echo "</pre>";
-        die();
+        // die();   
     }
 
     function escape($valor) {
@@ -71,5 +71,10 @@ DELIMITADOR;
 
     function getURL() {
         return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    }
+
+    function last_id() {
+        global $db;
+        return mysqli_insert_id($db);
     }
 ?>

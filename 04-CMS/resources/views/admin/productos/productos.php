@@ -21,6 +21,7 @@
             <option>Agotado</option>
         </select>
     </div>
+    <?php showSwalMensaje(); ?>
     <section class="adminProductos__contenido__tabla" aria-label="Listado de productos">
         <table>
             <thead>
@@ -35,7 +36,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr data-producto>
+                <?php get_productosShowAdmin(); ?>
+                <!-- <tr data-producto>
                     <td>
                         <div class="adminProductos__contenido__tabla__producto">
                             <img src="../img/product-laptop-01.png" alt="ASUS ROG Zephyrus G14" />
@@ -72,7 +74,7 @@
                             ><button type="button" data-eliminar-producto aria-label="Eliminar producto"><i class="fa-regular fa-trash-can"></i></button>
                         </div>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         <p data-estado-productos role="status" class="adminProductos__contenido__estado"></p>
