@@ -16,8 +16,6 @@ const obtenerJson = async (action) => {
                 id: id
             }
         });
-
-        console.log(res.data);
         return res.data;
     } catch (error) {
         console.log(error);
