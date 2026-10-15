@@ -45,3 +45,4 @@
         </div>
     </div>
 </section>
+<script src="js/getCategorias.js" defer></script>
