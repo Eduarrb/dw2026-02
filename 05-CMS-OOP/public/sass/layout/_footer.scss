@@ -1,0 +1,52 @@
+@use '../base/variables' as  v;
+
+.footer {
+    background-color: v.$color-primary-dark;
+    color: white;
+    font-family: v.$font-poppins;
+    &__contenedor {
+        &__top {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5rem;
+            &__col {
+                width: calc(25% - 15rem / 4);
+                @media only screen and (max-width: v.$bp-large) {
+                    width: calc(50% - 5rem / 2);
+                }
+                @media only screen and (max-width: v.$bp-small) {
+                    width: 100%;
+                }
+                img {
+                    width: 100%;
+                }
+                p {
+                    font-size: 1.4rem;
+                    line-height: 2.9rem;
+                    color: rgba(white, .7);
+                }
+                &__socialBox {
+                    display: flex;
+                    gap: 2rem;
+                    a {
+                        display: inline-block;
+                        font-size: 2rem;
+                        color: white;
+                    }
+                }
+                &--titulo {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    margin-bottom: 2rem;
+                }
+                &--linkBox {
+                    margin-bottom: 2rem;
+                    a {
+                        color: rgba(white, .7);
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}

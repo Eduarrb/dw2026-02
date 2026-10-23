@@ -1,0 +1,23 @@
+@use 'variables' as v;
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    @media only screen and (max-width: v.$bp-extraSmall) {
+        font-size: 50%;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}

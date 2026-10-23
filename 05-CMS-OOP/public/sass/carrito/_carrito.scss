@@ -1,0 +1,26 @@
+@use '../base/variables' as v;
+
+.carrito {
+  margin-top: 10.533rem;
+  padding-bottom: 5rem;
+  font-family: v.$font-poppins;
+  color: v.$color-primary-dark;
+  font-size: 1.4rem;
+  [hidden] { display: none; }
+  button, input { font: inherit; }
+  button { cursor: pointer; }
+  a:focus-visible, button:focus-visible, input:focus-visible { outline: .2rem solid v.$color-primary; outline-offset: .3rem; }
+  @media only screen and (max-width: v.$bp-extraLarge) { margin-top: 7.2rem; }
+  @media only screen and (max-width: v.$bp-large) { margin-top: 11.2rem; }
+  @media only screen and (max-width: v.$bp-extraSmall) { margin-top: 122.41px; font-size: 1.6rem; }
+  &__contenedor {
+    &__ruta { display: flex; gap: 1.5rem; padding: 3rem 0 2rem; color: v.$color-gray; a { color: v.$color-primary; } }
+    &__encabezado { display: flex; justify-content: space-between; align-items: end; margin-bottom: 3rem; h1 { font-size: 3rem; font-weight: 600; } p { color: v.$color-gray; margin-top: .8rem; } @media only screen and (max-width: v.$bp-small) { display: block; h1 { font-size: 2.6rem; } } }
+    &__contenido { display: flex; gap: 3rem; align-items: flex-start; &__lista { flex: 1; min-width: 0; border: .1rem solid v.$border-line; border-radius: 1rem; padding: 2.5rem; &--cabecera { display: grid; grid-template-columns: 1fr 12rem 13rem 3rem; gap: 1.5rem; padding: 0 1.5rem 1.5rem; border-bottom: .1rem solid v.$border-line; color: v.$color-gray; font-size: 1.2rem; } &__item { display: grid; grid-template-columns: 1fr 12rem 13rem 3rem; align-items: center; gap: 1.5rem; padding: 2rem 1.5rem; border-bottom: .1rem solid v.$border-line; &__producto { display: flex; align-items: center; gap: 1.5rem; min-width: 0; img { width: 9rem; height: 8rem; object-fit: contain; flex-shrink: 0; } h2 { font-size: 1.4rem; font-weight: 500; line-height: 1.5; } p { color: v.$color-primary; font-size: 1.2rem; margin-top: .5rem; } } &__cantidad { display: flex; width: 10.5rem; border: .1rem solid v.$border-line; border-radius: .5rem; overflow: hidden; button { width: 3.2rem; border: 0; background: white; color: v.$color-gray; font-size: 1.8rem; } input { width: 4rem; text-align: center; border: 0; appearance: textfield; } input::-webkit-inner-spin-button, input::-webkit-outer-spin-button { appearance: none; } } &__precio { font-weight: 600; font-size: 1.6rem; } &__eliminar { border: 0; background: white; color: v.$color-gray; font-size: 1.7rem; &:hover { color: #d33939; } } } &__vacio { text-align: center; padding: 4rem 1rem; color: v.$color-gray; i { display: block; color: v.$color-primary; font-size: 4rem; margin-bottom: 1rem; } h2 { color: v.$color-primary-dark; font-size: 1.8rem; margin-bottom: .8rem; } a { display: inline-block; margin-top: 2rem; } } &__acciones { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; a { color: v.$color-primary; } button { border: 0; background: white; color: #d33939; } } }
+      &__resumen { width: 34rem; border: .1rem solid v.$border-line; border-radius: 1rem; padding: 2.5rem; &--titulo { font-size: 2rem; font-weight: 600; padding-bottom: 1.8rem; border-bottom: .1rem solid v.$border-line; } &__fila { display: flex; justify-content: space-between; padding: 1.4rem 0; color: v.$color-gray; &--total { color: v.$color-primary-dark; font-size: 1.8rem; font-weight: 600; border-top: .1rem solid v.$border-line; margin-top: .5rem; } } &__envio { background: #f7f7ff; padding: 1.2rem; border-radius: .5rem; margin: 1rem 0 1.5rem; color: v.$color-gray; font-size: 1.2rem; i { color: v.$color-primary; margin-right: .5rem; } } &--comprar { width: 100%; border: 0; padding: 1.3rem; font-size: 1.5rem; } &--nota { text-align: center; color: v.$color-gray; font-size: 1.1rem; margin-top: 1.5rem; } }
+    @media only screen and (max-width: v.$bp-large) { flex-direction: column; &__lista, &__resumen { width: 100%; } &__resumen { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2rem; &--titulo, &__envio, &--comprar, &--nota { grid-column: 1 / -1; } } }
+    @media only screen and (max-width: v.$bp-small) { &__lista { padding: 1.2rem; &--cabecera { display: none; } &__item { grid-template-columns: 1fr auto; gap: 1rem; padding: 1.8rem .5rem; &__producto { grid-column: 1 / -1; img { width: 7rem; height: 7rem; } h2 { font-size: 1.3rem; } } &__cantidad { grid-column: 1; } &__precio { grid-column: 2; grid-row: 2; } &__eliminar { grid-column: 2; grid-row: 1; } } &__acciones { flex-direction: column; align-items: stretch; gap: 1.5rem; text-align: center; } } &__resumen { display: block; padding: 2rem; } }
+    }
+    &__seguridad { display: flex; gap: 3rem; margin-top: 3rem; padding: 2.5rem; border: .1rem solid v.$border-line; border-radius: 1rem; &__item { flex: 1; display: flex; gap: 1.5rem; align-items: center; & + & { border-left: .1rem solid v.$border-line; padding-left: 3rem; } i { color: v.$color-primary; font-size: 2.8rem; } h2 { font-size: 1.3rem; font-weight: 500; margin-bottom: .4rem; } p { color: v.$color-gray; font-size: 1.1rem; } } @media only screen and (max-width: v.$bp-small) { flex-direction: column; gap: 2rem; &__item + &__item { border-left: 0; padding-left: 0; } } }
+  }
+}

@@ -1,0 +1,6 @@
+@use '../base/variables' as v;
+
+.adminMensajes__contenido__detalle__cabecera--estado,
+.adminMensajes__contenido__detalle .adminMensajes__contenido__encabezado--contador { display: inline-flex; align-items: center; gap: .7rem; padding: .7rem 1.2rem; color: #a46015; background: #fff0d8; border: .1rem solid #f5d49e; border-radius: 2rem; font-size: 1.2rem; font-weight: 500; white-space: nowrap; }
+.adminMensajes__contenido__detalle__cabecera--estado i { color: #e39a26; font-size: .8rem; }
+@media only screen and (max-width: v.$bp-small) { .adminMensajes__contenido__detalle__cabecera--estado, .adminMensajes__contenido__detalle .adminMensajes__contenido__encabezado--contador { margin-top: 1.5rem; } }
